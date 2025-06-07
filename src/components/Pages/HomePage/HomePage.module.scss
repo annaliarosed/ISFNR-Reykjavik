@@ -1,0 +1,150 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: 20px;
+}
+
+.firstSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--background-color);
+}
+
+.firstSection {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  justify-content: space-between;
+
+  .text {
+    margin-top: 20px !important;
+  }
+}
+
+.deadlineTextTop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 80px;
+  p {
+    font-weight: bold !important;
+    color: var(--text-color) !important;
+    margin: 0 !important;
+  }
+}
+
+.secondSection {
+  background-color: var(--secondary-background-color);
+  color: var(--background-color);
+
+  .text {
+    color: var(--background-color) !important;
+  }
+}
+
+.header {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.img {
+  background-position: center;
+  background-size: cover;
+
+  margin-right: -20px;
+  margin-bottom: -20px;
+  margin-top: -112px;
+}
+
+.text {
+  white-space: pre-line;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-color) !important;
+}
+
+.list {
+  list-style: disc !important;
+  margin-left: 24px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    white-space: pre-line !important;
+    font-weight: 400 !important;
+  }
+}
+
+.deadlineText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+}
+
+.proposePanelLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    background-image: linear-gradient(#12111160),
+      url("https://isfnr.org/wp-content/uploads/2025/05/Screenshot-2025-05-31-at-15.14.05.png");
+    padding: 10px 20px !important;
+    border-radius: 4px !important;
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--text-color) !important;
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+
+      background-image: linear-gradient(#12111150),
+        url("https://isfnr.org/wp-content/uploads/2025/05/Screenshot-2025-05-31-at-15.14.05.png");
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.narwhal {
+  display: flex;
+  fill: var(--text-color);
+}
+
+.thirdSection {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 95px;
+  gap: 24px;
+}
+
+.thirdSectionContent {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  justify-content: space-between;
+}
+
+.rulesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

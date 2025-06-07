@@ -1,0 +1,34 @@
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  z-index: 9;
+}
+
+.backgroundImg {
+  background-position: bottom;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.backgroundImg .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #fff;
+  background-color: rgba(214, 214, 202, 0.8);
+}

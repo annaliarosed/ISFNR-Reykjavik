@@ -1,0 +1,61 @@
+.wrapper {
+  background-color: #918f8f;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 24px 16px;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(#12111199),
+    url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.14.jpeg");
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.02),
+    0 4px 8px 1px rgba(0, 0, 0, 0.078);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  color: var(--text-color-contrast);
+}
+
+.linkContent {
+  display: flex;
+  width: 100%;
+  // TODO: this will change when we have more links showing
+  justify-content: end;
+  align-items: end;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+
+  a {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    font-size: 20px !important;
+
+    &.active,
+    &:hover,
+    &:focus {
+      text-decoration: underline !important;
+      text-underline-offset: 4px !important;
+      color: var(--text-color-contrast) !important;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.loginWrapper {
+  position: relative;
+}
