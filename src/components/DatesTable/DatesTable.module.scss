@@ -1,0 +1,50 @@
+.importantDates {
+  border: 1px solid var(--text-color);
+  color: var(--text-color) !important;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+  }
+
+  .note {
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+  }
+
+  .datesTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #555;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    td {
+      font-size: 0.95rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}

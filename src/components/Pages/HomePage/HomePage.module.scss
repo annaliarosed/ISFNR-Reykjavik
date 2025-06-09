@@ -25,18 +25,6 @@
   }
 }
 
-.deadlineTextTop {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 80px;
-  p {
-    font-weight: bold !important;
-    color: var(--text-color) !important;
-    margin: 0 !important;
-  }
-}
-
 .secondSection {
   background-color: var(--secondary-background-color);
   color: var(--background-color);

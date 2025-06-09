@@ -5,6 +5,7 @@ import NarwhalGroup from "../../NarwhalGroup";
 import cn from "classnames";
 import { images } from "../../../imageAssets";
 import FmdBadOutlinedIcon from "@mui/icons-material/FmdBadOutlined";
+import DatesTable from "../../DatesTable/DatesTable";
 
 const HomePage = () => {
   return (
@@ -23,13 +24,8 @@ const HomePage = () => {
         We look forward to seeing you in Reykjavík!`}
             </p>
 
-            <div className={styles.deadlineTextTop}>
-              <FmdBadOutlinedIcon
-                sx={{
-                  color: "#f8f8f8",
-                }}
-              />
-              <p>The deadline for panel proposals is June 20</p>
+            <div>
+              <DatesTable />
             </div>
           </div>
 
