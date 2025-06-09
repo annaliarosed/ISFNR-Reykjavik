@@ -4,43 +4,32 @@ import FmdBadOutlinedIcon from "@mui/icons-material/FmdBadOutlined";
 
 const DatesTable = () => {
   return (
-    <div>
-      <section className={styles.importantDates}>
-        <p className={styles.note}>
-          <FmdBadOutlinedIcon
-            sx={{
-              color: "#f8f8f8",
-            }}
-            fontSize="small"
-          />
-          The deadline for panel proposals is June 20
-        </p>
-        <h2>Important Dates</h2>
+    <section className={styles.importantDates}>
+      <p className={styles.note}>
+        <FmdBadOutlinedIcon sx={{ color: "#f8f8f8" }} fontSize="small" />
+        The deadline for panel proposals is June 20
+      </p>
+      <h2>Important Dates</h2>
 
-        <table className={styles.datesTable}>
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Dates</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Call for Panels</td>
-              <td>10 May – 20 June 2025</td>
-            </tr>
-            <tr>
-              <td>Call for Papers & Posters</td>
-              <td>15 Aug – 01 Oct 2025</td>
-            </tr>
-            <tr>
-              <td>Conference</td>
-              <td>13 – 16 June 2026</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
+      <div className={styles.table}>
+        <div className={styles.rowHeader}>
+          <div>Event</div>
+          <div>Dates</div>
+        </div>
+        <div className={styles.row}>
+          <div>Call for Panels</div>
+          <div>10 May – 20 June 2025</div>
+        </div>
+        <div className={styles.row}>
+          <div>Call for Papers & Posters</div>
+          <div>15 Aug – 01 Oct 2025</div>
+        </div>
+        <div className={styles.row}>
+          <div>Conference</div>
+          <div>13 – 16 June 2026</div>
+        </div>
+      </div>
+    </section>
   );
 };
 

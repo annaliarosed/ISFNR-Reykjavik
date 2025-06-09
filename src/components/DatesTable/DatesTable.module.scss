@@ -24,27 +24,33 @@
     margin: 0;
   }
 
-  .datesTable {
+  .table {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    border-collapse: collapse;
+    font-size: 0.95rem;
 
-    th,
-    td {
-      text-align: left;
-      padding: 0.75rem;
+    .row,
+    .rowHeader {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0.75rem 0;
       border-bottom: 1px solid #555;
     }
 
-    th {
+    .rowHeader {
       font-weight: bold;
+      div {
+        text-align: left;
+      }
     }
 
-    td {
-      font-size: 0.95rem;
-    }
-
-    tr:last-child td {
+    .row:last-child {
       border-bottom: none;
+    }
+
+    div {
+      padding-right: 1rem;
     }
   }
 }
