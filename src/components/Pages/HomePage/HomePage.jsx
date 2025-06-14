@@ -21,6 +21,8 @@ const HomePage = () => {
 
         The conference is hosted by the department of Folkloristics at the University of Iceland, the Icelandic Association of Ethnology and Folklore and The Árni Magnússon Institute for Icelandic Studies.
 
+        This will be a hybrid event, so delegates will be able to participate either virtually or in person.
+
         We look forward to seeing you in Reykjavík!`}
             </p>
 
