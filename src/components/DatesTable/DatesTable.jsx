@@ -7,7 +7,7 @@ const DatesTable = () => {
     <section className={styles.importantDates}>
       <p className={styles.note}>
         <FmdBadOutlinedIcon sx={{ color: "#f8f8f8" }} fontSize="small" />
-        The deadline for panel proposals is June 20
+        The deadline for panel proposals has been extended to 25 June
       </p>
       <h2>Important Dates</h2>
 
@@ -18,7 +18,7 @@ const DatesTable = () => {
         </div>
         <div className={styles.row}>
           <div>Call for Panels</div>
-          <div>10 May – 20 June 2025</div>
+          <div>10 May – 25 June 2025</div>
         </div>
         <div className={styles.row}>
           <div>Call for Papers & Posters</div>

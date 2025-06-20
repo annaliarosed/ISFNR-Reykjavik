@@ -139,7 +139,9 @@ const HomePage = () => {
               </li>
             </ol>
             <div className={styles.deadlineText}>
-              <p>The deadline for panel proposals is June 20</p>
+              <p>
+                The deadline for panel proposals has been extended to 25 June
+              </p>
             </div>
 
             <div className={styles.proposePanelLink}>
