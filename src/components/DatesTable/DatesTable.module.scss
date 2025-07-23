@@ -15,22 +15,21 @@
     margin: 0 !important;
   }
 
-  .note {
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin: 0;
-  }
-
   .table {
     display: flex;
     flex-direction: column;
     width: 100%;
     font-size: 0.95rem;
 
-    .row,
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #555;
+      &.strikeout {
+        text-decoration: line-through;
+      }
+    }
     .rowHeader {
       display: grid;
       grid-template-columns: 1fr 1fr;

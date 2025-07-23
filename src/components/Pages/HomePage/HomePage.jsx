@@ -37,10 +37,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
-        <div className={styles.proposePanelLink}>
-          <a href="#rules">Propose a Panel!</a>
-        </div>
       </div>
 
       <div className={cn(styles.section, styles.secondSection)}>
@@ -97,7 +93,7 @@ const HomePage = () => {
           </li>
         </ul>
       </div>
-      <div id="rules" className={cn(styles.section, styles.thirdSection)}>
+      {/* <div id="rules" className={cn(styles.section, styles.thirdSection)}>
         <h2>Rules for proposing a panel</h2>
         <div className={styles.thirdSectionContent}>
           <div className={styles.rulesWrapper}>
@@ -162,7 +158,7 @@ const HomePage = () => {
             className={styles.img}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

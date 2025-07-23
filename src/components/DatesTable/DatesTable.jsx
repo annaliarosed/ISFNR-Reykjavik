@@ -1,14 +1,10 @@
 import React from "react";
 import styles from "./DatesTable.module.scss";
-import FmdBadOutlinedIcon from "@mui/icons-material/FmdBadOutlined";
+import cn from "classnames";
 
 const DatesTable = () => {
   return (
     <section className={styles.importantDates}>
-      <p className={styles.note}>
-        <FmdBadOutlinedIcon sx={{ color: "#f8f8f8" }} fontSize="small" />
-        The deadline for panel proposals has been extended to 25 June
-      </p>
       <h2>Important Dates</h2>
 
       <div className={styles.table}>
@@ -16,7 +12,7 @@ const DatesTable = () => {
           <div>Event</div>
           <div>Dates</div>
         </div>
-        <div className={styles.row}>
+        <div className={cn(styles.row, styles.strikeout)}>
           <div>Call for Panels</div>
           <div>10 May – 25 June 2025</div>
         </div>
