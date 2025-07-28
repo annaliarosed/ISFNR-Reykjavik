@@ -22,6 +22,8 @@
 
 .header {
   color: var(--text-color-contrast);
+  font-family: "Almendra", serif;
+  font-size: 25px;
 }
 
 .linkContent {
@@ -30,6 +32,7 @@
   // TODO: this will change when we have more links showing
   justify-content: end;
   align-items: end;
+  gap: 24px;
 }
 
 .links {

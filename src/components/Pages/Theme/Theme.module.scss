@@ -1,0 +1,26 @@
+.section {
+  padding: 20px;
+}
+
+.content {
+  width: 75vw;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.header {
+  font-size: 52px;
+  margin: 0;
+  font-family: "Almendra", serif;
+}
+
+.secondSection {
+  color: var(--secondary-background-color);
+  background-color: var(--background-color);
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+  .text {
+    color: var(--secondary-background-color) !important;
+  }
+}

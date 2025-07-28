@@ -10,11 +10,12 @@ const NavBar = () => {
         <h1 className={styles.header}>ISFNR 2026 Reykjavík</h1>
 
         <div className={styles.linkContent}>
-          <div className={cn(styles.links, styles.hidden)}>
+          <div className={cn(styles.links)}>
             <Link to={`/`}>Home</Link>
             <Link to={"about"}>About</Link>
-            <Link to={`contact`}>Contact</Link>
-            <Link to={`programme`}>Programme</Link>
+            <Link to={"theme"}>Theme</Link>
+            {/* <Link to={`contact`}>Contact</Link> */}
+            {/* <Link to={`programme`}>Programme</Link> */}
           </div>
 
           <div className={styles.loginWrapper}>

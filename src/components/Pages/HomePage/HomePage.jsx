@@ -39,7 +39,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={cn(styles.section, styles.secondSection)}>
+      {/* <div className={cn(styles.section, styles.secondSection)}>
         <h2>Conference Theme</h2>
         <p className={styles.text}>
           The conference engages broadly with the theme of nature(s) in
@@ -92,7 +92,7 @@ const HomePage = () => {
             narrative, its forms, functions and practice?
           </li>
         </ul>
-      </div>
+      </div> */}
       {/* <div id="rules" className={cn(styles.section, styles.thirdSection)}>
         <h2>Rules for proposing a panel</h2>
         <div className={styles.thirdSectionContent}>

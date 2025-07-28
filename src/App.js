@@ -8,6 +8,7 @@ import Programme from "./components/Programme/Programme.jsx";
 import HomePage from "./components/Pages/HomePage/HomePage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Layout from "./components/Layout/Layout.jsx";
+import Theme from "./components/Pages/Theme/Theme.jsx";
 
 function About() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/programme" element={<Programme />} />
+              <Route path="/theme" element={<Theme />} />
             </Routes>
             <Footer />
           </Layout>
