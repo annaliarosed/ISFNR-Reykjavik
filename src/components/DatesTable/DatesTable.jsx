@@ -18,7 +18,7 @@ const DatesTable = () => {
         </div>
         <div className={styles.row}>
           <div>Call for Papers & Posters</div>
-          <div>15 Aug – 01 Oct 2025</div>
+          <div>20 Aug – 01 Oct 2025</div>
         </div>
         <div className={styles.row}>
           <div>Conference</div>
