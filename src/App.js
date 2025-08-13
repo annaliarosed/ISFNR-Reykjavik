@@ -9,6 +9,7 @@ import HomePage from "./components/Pages/HomePage/HomePage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import Theme from "./components/Pages/Theme/Theme.jsx";
+import Information from "./components/Pages/Information/Information.jsx";
 
 function About() {
   return (
@@ -44,6 +45,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/programme" element={<Programme />} />
               <Route path="/theme" element={<Theme />} />
+              <Route path="/information" element={<Information />} />
             </Routes>
             <Footer />
           </Layout>

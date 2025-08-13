@@ -1,0 +1,39 @@
+.informationContainer {
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  margin-bottom: 2rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #004466;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.section {
+  margin-bottom: 4rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  p,
+  ul {
+    max-width: 700px;
+  }
+}

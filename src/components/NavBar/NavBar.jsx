@@ -14,6 +14,7 @@ const NavBar = () => {
             <Link to={`/`}>Home</Link>
             <Link to={"about"}>About</Link>
             <Link to={"theme"}>Theme</Link>
+            <Link to={"information"}>Information</Link>
             {/* <Link to={`contact`}>Contact</Link> */}
             {/* <Link to={`programme`}>Programme</Link> */}
           </div>
