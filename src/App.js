@@ -12,6 +12,7 @@ import Theme from "./components/Pages/Theme/Theme.jsx";
 import Information from "./components/Pages/Information/Information.jsx";
 import CallForProposals from "./components/Pages/CallForProposals/CallForProposals.jsx";
 import Travel from "./components/Pages/Travel/Travel.jsx";
+import Organisers from "./components/Pages/Organisers/Organisers.jsx";
 
 function App() {
   const basePath = "/we-meet-across-the-world/reykjavik-iceland";
@@ -30,6 +31,7 @@ function App() {
               <Route path="/cfp" element={<CallForProposals />} />
               <Route path="/information" element={<Information />} />
               <Route path="/travel" element={<Travel />} />
+              <Route path="/organisers" element={<Organisers />} />
             </Routes>
             <Footer />
           </Layout>

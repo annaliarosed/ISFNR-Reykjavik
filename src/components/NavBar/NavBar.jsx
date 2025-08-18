@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import styles from "./NavBar.module.scss";
@@ -11,6 +10,21 @@ const NavBar = () => {
 
   return (
     <nav className={styles.wrapper}>
+      <div className={styles.loginWrapper}>
+        <a
+          data-organisationid="4"
+          data-organisation="isfnr2026"
+          href="https://nomadit.co.uk/account/contact"
+          className="login-button"
+          accessKey="3"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Login"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <i className="fas fa-user"></i> <span>Login</span>
+        </a>
+      </div>
       {/* Hamburger icon - shown on mobile */}
       <button
         className={styles.hamburger}
@@ -23,7 +37,9 @@ const NavBar = () => {
       </button>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <LogoLeftAligned />
+          <NavLink to="/">
+            <LogoLeftAligned />
+          </NavLink>
         </div>
 
         {/* Link block (mobile: collapsible) */}
@@ -54,25 +70,13 @@ const NavBar = () => {
             >
               Call for Proposals
             </NavLink>
-            {/* <NavLink to={`/information`}>Information</NavLink> */}
-            {/* <NavLink to={`/contact`}>Contact</NavLink> */}
-            {/* <NavLink to={`/programme`}>Programme</NavLink> */}
-          </div>
-
-          <div className={styles.loginWrapper}>
-            <a
-              data-organisationid="4"
-              data-organisation="isfnr2026"
-              href="https://nomadit.co.uk/account/contact"
-              className="login-button"
-              accessKey="3"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Login"
+            <NavLink
+              to={`/organisers`}
               onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
-              <i className="fas fa-user"></i> <span>Login</span>
-            </a>
+              Organisers
+            </NavLink>
           </div>
         </div>
       </div>

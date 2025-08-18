@@ -1,10 +1,6 @@
 import React from "react";
 import styles from "./CallForProposals.module.scss";
 import StampTransparent from "../../icons/StampTransparent";
-import CreamNTransparent from "../../icons/CreamNTransparent";
-import Logo1 from "../../icons/Logo1";
-import BigLogoTransCream from "../../icons/BigLogoTransCream";
-import cn from "classnames";
 
 const CallForProposals = () => {
   return (
@@ -82,14 +78,17 @@ const CallForProposals = () => {
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
               <p>
-                All proposals must be made via the online form on the Programme
-                tab, not by email. There is a 'Propose paper' button in the
-                title section of each open panel. Navigate to the panel you are
-                interested in and click on this button to propose directly to
-                that panel. There is also the possibility to submit a paper into
-                the Sui Generis/Individual Papers section (if you do not find a
-                suitable panel from the accepted panels list), from which
-                thematic panels will be formed.
+                <span style={{ fontWeight: "bold" }}>
+                  All proposals must be made via the online form on the
+                  Programme tab, not by email. There is a 'Propose paper' button
+                  in the title section of each open panel.
+                </span>{" "}
+                Navigate to the panel you are interested in and click on this
+                button to propose directly to that panel. There is also the
+                possibility to submit a paper into the Sui Generis/Individual
+                Papers section (if you do not find a suitable panel from the
+                accepted panels list), from which thematic panels will be
+                formed.
               </p>
 
               <p>
@@ -165,15 +164,14 @@ const CallForProposals = () => {
               <p>
                 Poster sessions offer an opportunity for those who do not wish
                 to present orally, or whose work is not yet at the paper
-                presentation stage. Posters must conform to the same basic
-                requirements as outlined for the panel sessions. Sessions will
-                run throughout the Conference, with dedicated slots when poster
-                presenters will be available at their respective display to
-                answer questions/discuss their topic with colleagues. All
-                posters must also be uploaded on the site (not necessarily at
-                proposal stage, but before the conference) and there will also
-                be an online session provided for poster presentations by
-                colleagues attending virtually.
+                presentation stage. Posters should engage clearly with the
+                conference theme. Sessions will run throughout the Conference,
+                with dedicated slots when poster presenters will be available at
+                their respective display to answer questions/discuss their topic
+                with colleagues. All posters must also be uploaded on the site
+                (not necessarily at proposal stage, but before the conference)
+                and there will also be an online session provided for poster
+                presentations by colleagues attending virtually.
               </p>
             </div>
 
@@ -260,8 +258,10 @@ const CallForProposals = () => {
 
             <div className={styles.papersBlurb}>
               <p>
-                We can accommodate a transfer process for papers which are
-                deemed exceptional, but do not fit the panel to which they were
+                Marking a paper for transfer should not be used to evade
+                rejecting papers that do not meet academic criteria. We can
+                accommodate a transfer process for papers which are deemed
+                exceptional, but do not fit the panel to which they were
                 proposed. Convenors of the panel can mark these papers for
                 transfer.
               </p>
@@ -328,8 +328,11 @@ const CallForProposals = () => {
                   Convenor/author email addresses are not shown on the panel
                   pages for privacy/anti-spam reasons. However there is an
                   in-built secure email messaging system. If you cannot work
-                  that, please email isfnr2026(at)nomadit.co.uk to obtain
-                  relevant email addresses.
+                  that, please email{" "}
+                  <a href="mailto:isfnr2026@nomadit.co.uk">
+                    isfnr2026(at)nomadit.co.uk
+                  </a>{" "}
+                  to obtain relevant email addresses.
                 </p>
               </div>
             </div>

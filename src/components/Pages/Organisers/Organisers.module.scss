@@ -1,0 +1,116 @@
+.page {
+  padding: 60px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Jost", sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h1 {
+    font-family: "Almendra", serif;
+    font-size: 40px;
+    margin-bottom: 8px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+}
+
+.institutions {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h2 {
+    font-family: "Almendra", serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .logoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+
+    img {
+      height: 80px;
+      width: auto;
+      filter: brightness(0.9) contrast(1.1);
+    }
+  }
+
+  .text {
+    max-width: 800px;
+    margin: 0 auto 12px;
+    line-height: 1.6;
+  }
+}
+
+.committees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+
+  .committeeBlock {
+    max-width: 400px;
+
+    h3 {
+      font-family: "Almendra", serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.adminBlock {
+  text-align: center;
+
+  h3 {
+    font-family: "Almendra", serif;
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .institutions .logoGrid img {
+    height: 60px;
+  }
+
+  .committees {
+    flex-direction: column;
+    align-items: center;
+  }
+}

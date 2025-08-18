@@ -24,18 +24,20 @@ html {
   // This is only for the html coming in from PHP
   .login-button {
     color: var(--background-color) !important;
-    padding: 6px 12px !important;
+    padding: 4px 8px !important;
     border-radius: 4px !important;
     background-color: var(--text-color) !important;
     text-decoration: none !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 
   .toggle-loggedin-menu {
-    color: var(--text-color-contrast) !important;
-    font-size: 20px !important;
+    color: var(--background-color) !important;
+
+    font-size: 18px !important;
     font-weight: 500 !important;
-    background-color: var(--background-color) !important;
+    background-color: var(--text-color) !important;
+
     border-radius: 4px !important;
     padding: 0 4px !important;
 

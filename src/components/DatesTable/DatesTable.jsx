@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./DatesTable.module.scss";
-import cn from "classnames";
 
 const DatesTable = () => {
   return (
@@ -12,10 +11,10 @@ const DatesTable = () => {
           <div>Event</div>
           <div>Dates</div>
         </div>
-        <div className={cn(styles.row, styles.strikeout)}>
+        {/* <div className={cn(styles.row, styles.strikeout)}>
           <div>Call for Panels</div>
           <div>10 May – 25 June 2025</div>
-        </div>
+        </div> */}
         <div className={styles.row}>
           <div>Call for Papers & Posters</div>
           <div>20 Aug – 01 Oct 2025</div>

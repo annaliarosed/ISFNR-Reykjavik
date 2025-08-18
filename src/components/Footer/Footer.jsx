@@ -22,7 +22,7 @@ const Footer = () => {
               className={styles.img}
             />
             <p className={styles.credit}>
-              Flyer design by: <br />
+              Logo and design by: <br />
               <a
                 href="https://www.napiorkowski.xyz/"
                 target="_blank"

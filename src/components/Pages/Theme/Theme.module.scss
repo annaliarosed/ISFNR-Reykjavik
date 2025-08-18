@@ -1,7 +1,6 @@
 .section {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 59% 39%;
+  padding: 40px;
+  display: flex;
   gap: 40px;
 }
 
@@ -27,12 +26,27 @@
 }
 
 .imgWrapper {
-  margin: auto 0;
+  height: 70vh;
+  width: 137vw;
 }
 
 .img {
-  height: 70vh;
+  height: 100%;
+  width: 100%;
   background-position: center;
+
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 850px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .imgWrapper {
+    height: 44vh;
+    width: 87vw;
+    margin: 0 auto;
+  }
 }

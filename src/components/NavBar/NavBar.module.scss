@@ -34,13 +34,14 @@
   width: -webkit-fill-available;
   // TODO: this will change when we have more links showing
   justify-content: end;
+
   align-items: end;
   gap: 24px;
 }
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 
   a {
     color: var(--text-color) !important;
@@ -72,7 +73,9 @@
 }
 
 .loginWrapper {
-  position: relative;
+  position: absolute;
+  right: 10px;
+  top: 15px;
 
   a {
     &:focus {
@@ -83,17 +86,6 @@
         text-decoration: underline;
       }
     }
-  }
-}
-
-@media screen and (max-width: 689px) {
-  .logo {
-    width: 65vw;
-  }
-
-  .content {
-    flex-direction: column;
-    align-items: center !important;
   }
 }
 
@@ -119,8 +111,8 @@
   @media screen and (max-width: 689px) {
     display: flex;
     position: absolute;
-    top: 16px;
-    right: 16px;
+    bottom: 7px;
+    right: 7px;
     z-index: 3;
   }
 }
@@ -140,11 +132,19 @@
   z-index: 2;
 }
 
-/* Update existing styles for responsiveness */
 @media screen and (max-width: 689px) {
-  .linkContent {
+  .logo {
+    width: 65vw;
+  }
+
+  .content {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start !important;
+  }
+  .linkContent {
+    align-items: baseline;
+    padding: 40px;
+    flex-direction: column;
     gap: 16px;
     position: absolute;
     top: 100%;
@@ -152,7 +152,6 @@
     right: 0;
     background-color: rgba(18, 17, 17, 0.8);
     backdrop-filter: blur(6px);
-    border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transform-origin: top;
     transform: scaleY(0);
