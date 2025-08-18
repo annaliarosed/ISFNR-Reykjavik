@@ -7,34 +7,41 @@
   padding: 8px 16px 24px 16px;
   position: sticky;
   top: 0;
-  background-image: linear-gradient(#12111199),
+  background-image: linear-gradient(#121111cc),
     url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.14.jpeg");
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.02),
     0 4px 8px 1px rgba(0, 0, 0, 0.078);
 }
 
+.logo {
+  width: 65vw;
+}
+
 .content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 
 .header {
   color: var(--text-color-contrast);
+  font-family: "Almendra", serif;
+  font-size: 25px;
 }
 
 .linkContent {
   display: flex;
-  width: 100%;
+  width: -webkit-fill-available;
   // TODO: this will change when we have more links showing
   justify-content: end;
+
   align-items: end;
+  gap: 24px;
 }
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 
   a {
     color: var(--text-color) !important;
@@ -42,12 +49,21 @@
     border-bottom: none !important;
     font-size: 20px !important;
 
-    &.active,
-    &:hover,
-    &:focus {
-      text-decoration: underline !important;
+    &.activeLink {
+      border-bottom: 1px solid var(--text-color) !important;
       text-underline-offset: 4px !important;
-      color: var(--text-color-contrast) !important;
+    }
+
+    &.active,
+    &:hover {
+      border-bottom: 1px solid var(--text-color) !important;
+      text-underline-offset: 4px !important;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid var(--text-color) !important;
+      text-underline-offset: 4px !important;
     }
   }
 
@@ -57,5 +73,110 @@
 }
 
 .loginWrapper {
-  position: relative;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+
+  a {
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px 0px var(--text-color);
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* === HAMBURGER MENU === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+
+  .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 689px) {
+    display: flex;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    z-index: 3;
+  }
+}
+
+/* Show/hide menu based on isMenuOpen */
+.menuOpen {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); // optional semi-transparent bg
+  padding: 16px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 689px) {
+  .logo {
+    width: 65vw;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .linkContent {
+    align-items: baseline;
+    padding: 40px;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(18, 17, 17, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .menuOpen {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      font-size: 18px !important;
+      padding: 6px 0;
+    }
+  }
+
+  .loginWrapper {
+    margin-top: 8px;
+  }
 }

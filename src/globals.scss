@@ -1,35 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --primary: #011e4a;
   --primary-hover: #1a345c;
-  --text-color: #f8f8f8;
+  --text-color: #f2f1e2;
   --text-color-contrast: #e5e8ec;
 
   --pamphlet-background: #d6d6ca;
   --background-color: #2f2b2c;
   --secondary-background-color: #eeeded;
-
+  --inky-blue: #001ea5;
   // background-color: grey;
   //   background-position: center;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Almendra", serif;
 
   // This is only for the html coming in from PHP
   .login-button {
     color: var(--background-color) !important;
-    padding: 6px 12px !important;
+    padding: 4px 8px !important;
     border-radius: 4px !important;
     background-color: var(--text-color) !important;
     text-decoration: none !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 
   .toggle-loggedin-menu {
-    color: var(--text-color-contrast) !important;
-    font-size: 20px !important;
+    color: var(--background-color) !important;
+
+    font-size: 18px !important;
     font-weight: 500 !important;
-    background-color: var(--background-color) !important;
+    background-color: var(--text-color) !important;
+
     border-radius: 4px !important;
     padding: 0 4px !important;
 

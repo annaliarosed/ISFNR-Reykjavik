@@ -3,8 +3,6 @@ import React from "react";
 import styles from "./HomePage.module.scss";
 import NarwhalGroup from "../../NarwhalGroup";
 import cn from "classnames";
-import { images } from "../../../imageAssets";
-import FmdBadOutlinedIcon from "@mui/icons-material/FmdBadOutlined";
 import DatesTable from "../../DatesTable/DatesTable";
 
 const HomePage = () => {
@@ -34,12 +32,14 @@ const HomePage = () => {
           <div>
             <div className={styles.narwhal}>
               <NarwhalGroup />
+              {/* <LogoLeftAligned /> */}
+              {/* <Logo1 /> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className={cn(styles.section, styles.secondSection)}>
+      {/* <div className={cn(styles.section, styles.secondSection)}>
         <h2>Conference Theme</h2>
         <p className={styles.text}>
           The conference engages broadly with the theme of nature(s) in
@@ -92,7 +92,7 @@ const HomePage = () => {
             narrative, its forms, functions and practice?
           </li>
         </ul>
-      </div>
+      </div> */}
       {/* <div id="rules" className={cn(styles.section, styles.thirdSection)}>
         <h2>Rules for proposing a panel</h2>
         <div className={styles.thirdSectionContent}>
