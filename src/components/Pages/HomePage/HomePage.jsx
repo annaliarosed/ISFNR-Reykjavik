@@ -3,8 +3,6 @@ import React from "react";
 import styles from "./HomePage.module.scss";
 import NarwhalGroup from "../../NarwhalGroup";
 import cn from "classnames";
-import { images } from "../../../imageAssets";
-import FmdBadOutlinedIcon from "@mui/icons-material/FmdBadOutlined";
 import DatesTable from "../../DatesTable/DatesTable";
 
 const HomePage = () => {
@@ -34,6 +32,8 @@ const HomePage = () => {
           <div>
             <div className={styles.narwhal}>
               <NarwhalGroup />
+              {/* <LogoLeftAligned /> */}
+              {/* <Logo1 /> */}
             </div>
           </div>
         </div>

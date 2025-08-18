@@ -1,26 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 import styles from "./NavBar.module.scss";
 import cn from "classnames";
+import LogoLeftAligned from "../icons/LogoLeftAligned";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className={styles.wrapper}>
+      {/* Hamburger icon - shown on mobile */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle navigation menu"
+      >
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </button>
       <div className={styles.content}>
-        <h1 className={styles.header}>ISFNR 2026 Reykjavík</h1>
+        <div className={styles.logo}>
+          <LogoLeftAligned />
+        </div>
 
-        <div className={styles.linkContent}>
-          <div className={cn(styles.links)}>
-            <Link to={`/`}>Home</Link>
-            <Link to={"about"}>About</Link>
-            <Link to={"theme"}>Theme</Link>
-            <Link to={"information"}>Information</Link>
-            {/* <Link to={`contact`}>Contact</Link> */}
-            {/* <Link to={`programme`}>Programme</Link> */}
+        {/* Link block (mobile: collapsible) */}
+        <div
+          className={cn(styles.linkContent, {
+            [styles.menuOpen]: isMenuOpen,
+          })}
+        >
+          <div className={styles.links}>
+            <NavLink
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/theme"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Theme
+            </NavLink>
+            <NavLink
+              to={`/cfp`}
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Call for Proposals
+            </NavLink>
+            {/* <NavLink to={`/information`}>Information</NavLink> */}
+            {/* <NavLink to={`/contact`}>Contact</NavLink> */}
+            {/* <NavLink to={`/programme`}>Programme</NavLink> */}
           </div>
 
           <div className={styles.loginWrapper}>
-            {/* External Nomad login button */}
             <a
               data-organisationid="4"
               data-organisation="isfnr2026"
@@ -30,6 +69,7 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Login"
+              onClick={() => setIsMenuOpen(false)}
             >
               <i className="fas fa-user"></i> <span>Login</span>
             </a>

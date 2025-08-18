@@ -10,24 +10,8 @@ import Footer from "./components/Footer/Footer.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import Theme from "./components/Pages/Theme/Theme.jsx";
 import Information from "./components/Pages/Information/Information.jsx";
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-      <p>This is the about page.</p>
-    </div>
-  );
-}
-
-function Contact() {
-  return (
-    <div>
-      <h2>Contact</h2>
-      <p>Contact info here.</p>
-    </div>
-  );
-}
+import CallForProposals from "./components/Pages/CallForProposals/CallForProposals.jsx";
+import Travel from "./components/Pages/Travel/Travel.jsx";
 
 function App() {
   const basePath = "/we-meet-across-the-world/reykjavik-iceland";
@@ -41,11 +25,11 @@ function App() {
             <NavBar />
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/programme" element={<Programme />} />
               <Route path="/theme" element={<Theme />} />
+              <Route path="/cfp" element={<CallForProposals />} />
               <Route path="/information" element={<Information />} />
+              <Route path="/travel" element={<Travel />} />
             </Routes>
             <Footer />
           </Layout>
