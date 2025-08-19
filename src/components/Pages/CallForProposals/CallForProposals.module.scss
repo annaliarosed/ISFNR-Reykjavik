@@ -40,7 +40,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  max-width: 1000px;
+  max-width: 70vw;
   margin: 0 auto;
 }
 
@@ -54,7 +54,11 @@ a {
     border-radius: 6px;
     flex: 0 1 calc(33.333% - 2rem); /* 3 items per row with gap accounted for */
     box-sizing: border-box;
-
+    text-decoration: none;
+    font-size: 14px !important;
+    color: #000;
+    font-family: "Almendra", serif !important;
+    text-transform: capitalize !important;
     &:hover {
       .stamp {
         fill: var(--inky-blue);
@@ -80,13 +84,6 @@ a {
     width: 20px;
     height: auto;
     display: flex;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #000;
-    font-family: "Almendra", serif !important;
   }
 }
 
@@ -115,7 +112,7 @@ a {
     color: var(--background-color);
     font-family: "Almendra", serif !important;
     margin: 0;
-    font-size: 36px;
+    font-size: 36px !important;
     letter-spacing: 2px;
     margin-bottom: 16px;
   }
@@ -146,7 +143,7 @@ a {
 
     .rulesHeader {
       font-family: "Almendra", serif !important;
-      font-size: 20px;
+      font-size: 20px !important;
       display: flex;
       align-self: flex-start;
       font-weight: 600;
@@ -177,7 +174,7 @@ a {
 // section specific styles
 
 .infoSection {
-  width: 43vw;
+  max-width: 43vw;
   display: flex;
   flex-direction: column;
   line-height: 1.5;
@@ -212,7 +209,7 @@ a {
     padding: 6px 12px;
 
     .navLink {
-      font-size: 16px;
+      font-size: 16px !important;
     }
   }
 
@@ -220,7 +217,7 @@ a {
     padding: 24px;
 
     h2 {
-      font-size: 28px;
+      font-size: 28px !important;
       text-align: center;
     }
   }
@@ -235,16 +232,16 @@ a {
     }
 
     .rulesHeader {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
 
   .infoSection {
     width: 100%;
     padding: 0 1rem;
-
+    max-width: 80vw;
     h3 {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
 
@@ -260,7 +257,7 @@ a {
     }
 
     .header {
-      font-size: 24px;
+      font-size: 24px !important;
     }
   }
 }

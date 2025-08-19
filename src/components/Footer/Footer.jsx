@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.content}>
         <div className={styles.itemsWrapper}>
           <div className={styles.footerItem}>
-            Conference contact:{" "}
+            <p>Conference contact: </p>
             <a href="mailto:isfnr2026@nomadit.co.uk">
               isfnr2026(at)nomadit.co.uk
             </a>

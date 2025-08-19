@@ -2,71 +2,76 @@ import React from "react";
 import styles from "./CallForProposals.module.scss";
 import StampTransparent from "../../icons/StampTransparent";
 
+const AnchorScrollButton = ({ targetId, children, className }) => {
+  const handleClick = () => {
+    const el = document.getElementById(targetId);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <button onClick={handleClick} className={className}>
+      {children}
+    </button>
+  );
+};
+
 const CallForProposals = () => {
   return (
     <div className={styles.container}>
       <div className={styles.firstSection}>
         <div className={styles.headerWrapper}>
-          {/* <div className={styles.narwhal}>
-            <CreamNTransparent />
-          </div> */}
           <h1 className={styles.header}>
             ISFNR 2026 Call for Papers and Posters
           </h1>
-          {/* <div className={styles.narwhal}>
-            <CreamNTransparent />
-          </div> */}
         </div>
 
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li className={styles.navButton} role="button">
-              <a href="#papers" className={styles.navLink}>
+            <li className={styles.navButton}>
+              <AnchorScrollButton targetId="papers" className={styles.navLink}>
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
                 Proposing a paper
-              </a>
+              </AnchorScrollButton>
             </li>
             <li className={styles.navButton}>
-              <a href="#posters" className={styles.navLink}>
+              <AnchorScrollButton targetId="posters" className={styles.navLink}>
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
                 Proposing a poster
-              </a>
+              </AnchorScrollButton>
             </li>
             <li className={styles.navButton}>
-              <a href="#strategy" className={styles.navLink}>
+              <AnchorScrollButton
+                targetId="strategy"
+                className={styles.navLink}
+              >
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
                 Possible strategic advice
-              </a>
+              </AnchorScrollButton>
             </li>
             <li className={styles.navButton}>
-              <a href="#transfer" className={styles.navLink}>
+              <AnchorScrollButton
+                targetId="transfer"
+                className={styles.navLink}
+              >
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
                 Transfer Process
-              </a>
+              </AnchorScrollButton>
             </li>
-            {/* <li className={styles.navButton}>
-              <a href="#format" className={styles.navLink}>
-                <div className={styles.stamp}>
-                  <StampTransparent />
-                </div>
-                Conference Format
-              </a>
-            </li> */}
             <li className={styles.navButton}>
-              <a href="#info" className={styles.navLink}>
+              <AnchorScrollButton targetId="info" className={styles.navLink}>
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
                 Editing & Communication
-              </a>
+              </AnchorScrollButton>
             </li>
           </ul>
         </nav>
@@ -242,7 +247,7 @@ const CallForProposals = () => {
               <p>
                 Papers which are neither accepted nor rejected, but marked for
                 'transfer', will be given the opportunity to be rehoused into
-                other panels. These papers marked for “transfer”, will be added
+                other panels. These papers marked for “transfer”, will be
                 reviewed by the Committee to consider adding them to the Sui
                 Generis list of papers.
               </p>
