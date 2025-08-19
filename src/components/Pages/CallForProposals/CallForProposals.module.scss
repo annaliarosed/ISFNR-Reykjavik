@@ -137,8 +137,16 @@ a {
 
     .stamp {
       width: 20px;
-      height: auto;
+      height: 20px;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .rulesHeader {
@@ -202,6 +210,7 @@ a {
   .navList {
     gap: 0.5rem;
     padding: 0 1rem;
+    max-width: 100vw;
   }
 
   .navButton {

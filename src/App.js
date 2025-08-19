@@ -14,6 +14,7 @@ import CallForProposals from "./components/Pages/CallForProposals/CallForProposa
 import Travel from "./components/Pages/Travel/Travel.jsx";
 import Organisers from "./components/Pages/Organisers/Organisers.jsx";
 import { basePath } from "./consts.js";
+import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
   // const basePath = "/we-meet-across-the-world/reykjavik-iceland";
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <div>
           <Layout>
             <NavBar />
