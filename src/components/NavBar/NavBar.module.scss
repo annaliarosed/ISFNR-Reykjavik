@@ -7,8 +7,10 @@
   padding: 8px 16px 24px 16px;
   position: sticky;
   top: 0;
-  background-image: linear-gradient(#121111cc),
-    url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.14.jpeg");
+  background-color: rgba(18, 17, 17, 0.8);
+  background-image: url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.14.jpeg");
+  background-blend-mode: overlay; // or multiply, depending on desired effect
+
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.02),
     0 4px 8px 1px rgba(0, 0, 0, 0.078);
 }
@@ -129,7 +131,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 20;
 }
 
 @media screen and (max-width: 850px) {
@@ -140,6 +142,7 @@
   .content {
     flex-direction: column;
     align-items: flex-start !important;
+    z-index: 50;
   }
   .linkContent {
     align-items: baseline;
@@ -164,6 +167,11 @@
     transform: scaleY(1);
     opacity: 1;
     pointer-events: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
   }
 
   .links {

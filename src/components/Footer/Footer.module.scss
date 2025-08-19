@@ -1,10 +1,10 @@
 .wrapper {
   background-color: rgba(1, 30, 74, 0.9);
-  padding: 16px;
+  padding: 112px 16px 16px 16px;
   display: flex;
   align-items: end;
   position: relative;
-  height: 40vh;
+  z-index: 10;
 }
 
 .footerItem {
@@ -45,8 +45,10 @@
 }
 
 .backgroundImg {
-  background: linear-gradient(#17191899),
-    url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.00.jpeg");
+  background-color: #17191899;
+  background-image: url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.00.jpeg");
+  background-blend-mode: overlay; // or multiply, depending on desired effect
+
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,5 +99,21 @@
   .img {
     width: 16vw;
     height: 13vh;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .itemsWrapper {
+    flex-direction: column-reverse;
+    align-items: self-start;
+    gap: 16px;
+  }
+
+  .footerItem {
+    width: 100%;
+  }
+
+  .flyerWrapper {
+    align-items: baseline;
   }
 }
