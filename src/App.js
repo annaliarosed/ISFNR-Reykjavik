@@ -13,16 +13,13 @@ import Information from "./components/Pages/Information/Information.jsx";
 import CallForProposals from "./components/Pages/CallForProposals/CallForProposals.jsx";
 import Travel from "./components/Pages/Travel/Travel.jsx";
 import Organisers from "./components/Pages/Organisers/Organisers.jsx";
-import { basePath } from "./consts.js";
-import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
+// import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
-  // const basePath = "/we-meet-across-the-world/reykjavik-iceland";
-
   return (
     <>
       <Router>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <div>
           <Layout>
             <NavBar />
@@ -34,6 +31,7 @@ function App() {
               <Route path={`/information`} element={<Information />} />
               <Route path={`/travel`} element={<Travel />} />
               <Route path={`/organisers`} element={<Organisers />} />
+              <Route path="*" element={<HomePage />} />
             </Routes>
             <Footer />
           </Layout>
