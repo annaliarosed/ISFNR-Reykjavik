@@ -16,11 +16,11 @@ import Organisers from "./components/Pages/Organisers/Organisers.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
-  const basePath = "/we-meet-across-the-world/reykjavik-iceland";
+  // const basePath = "/we-meet-across-the-world/reykjavik-iceland";
 
   return (
     <>
-      <Router basename={basePath}>
+      <Router>
         {/* <ScrollToTop /> */}
         <div>
           <Layout>
