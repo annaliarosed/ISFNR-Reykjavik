@@ -1,17 +1,5 @@
 import React from "react";
 
-{
-  /* <style>
-.cls-1 {
-  fill: #f2f1e2;
-}
-
-.cls-2 {
-  fill: #f2f1e2;
-}
-</style> */
-}
-
 const LogoLeftAligned = () => {
   return (
     <svg

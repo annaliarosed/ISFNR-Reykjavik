@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import styles from "./Programme.module.scss";
 
 const Programme = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const CONFERENCE_TAG = "isfnr2026";
-
-    const isProgrammePage =
-      location.hash === "#/programme" ||
-      location.pathname.endsWith("/programme");
-
-    if (!isProgrammePage) return;
 
     const sweetDiv = document.getElementById("conference-sweet");
     if (!sweetDiv) {
@@ -45,17 +40,19 @@ const Programme = () => {
       const div = document.getElementById("conference-sweet");
       if (div) div.innerHTML = "";
     };
-  }, [location]);
+  }, [pathname]);
 
   return (
-    <div id="react-minisite-wrapper">
-      <h1>Programme</h1>
-      <div
-        id="conference-sweet"
-        data-conference="isfnr2026"
-        style={{ minHeight: "100vh" }}
-      >
-        Loading conference panels…
+    <div className={styles.wrapper}>
+      <div id="react-minisite-wrapper">
+        <h1 className={styles.header}>Programme</h1>
+        <div
+          id="conference-sweet"
+          data-conference="isfnr2026"
+          style={{ minHeight: "100vh" }}
+        >
+          Loading conference panels…
+        </div>
       </div>
     </div>
   );
