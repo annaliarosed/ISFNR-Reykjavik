@@ -6,6 +6,7 @@
   justify-content: space-between;
   z-index: 7;
   padding: 8px 16px 24px 16px;
+  position: relative;
   top: 0;
   background-color: rgba(18, 17, 17, 0.8);
   background-image: url("https://isfnr.org/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-30-at-12.22.14.jpeg");
@@ -44,6 +45,11 @@
 .links {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 1rem;
+  max-width: 60vw;
+  margin: 0 auto;
 
   a {
     color: var(--text-color) !important;
@@ -109,8 +115,10 @@
     display: block;
     transition: all 0.3s ease;
   }
+}
 
-  @media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
+  .hamburger {
     display: flex;
     position: absolute;
     bottom: 7px;

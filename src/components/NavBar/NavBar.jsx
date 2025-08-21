@@ -70,6 +70,14 @@ const NavBar = () => {
             >
               Programme
             </NavLink>
+
+            <NavLink
+              to="/information"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Information
+            </NavLink>
             <NavLink
               to={`/cfp`}
               onClick={() => setIsMenuOpen(false)}
