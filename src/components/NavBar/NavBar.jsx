@@ -64,6 +64,13 @@ const NavBar = () => {
               Theme
             </NavLink>
             <NavLink
+              to="/programme"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Programme
+            </NavLink>
+            <NavLink
               to={`/cfp`}
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
