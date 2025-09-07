@@ -64,6 +64,7 @@ const NavBar = () => {
               Theme
             </NavLink>
             <NavLink
+              reloadDocument
               to="/programme"
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
