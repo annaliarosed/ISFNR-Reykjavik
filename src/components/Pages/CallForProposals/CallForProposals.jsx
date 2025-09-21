@@ -176,7 +176,13 @@ const CallForProposals = () => {
               </div>
 
               <div className={styles.paperProposalRules}>
-                <p className={styles.rulesHeader}>
+                <p
+                  className={styles.rulesHeader}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
                   To propose a paper visit the{"  "}
                   <Link
                     reloadDocument
@@ -184,7 +190,7 @@ const CallForProposals = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      marginLeft: "4px",
+                      marginLeft: "2px",
                       color: "var(--inky-blue)",
                       display: "flex",
                       alignItems: "center",
