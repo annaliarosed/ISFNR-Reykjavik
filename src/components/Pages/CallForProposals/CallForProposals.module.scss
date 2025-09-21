@@ -175,6 +175,25 @@ a {
 
 // section specific styles
 
+.programmeCallOut {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  color: var(--inky-blue);
+  font-weight: bold;
+  padding: 16px 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.paperProposalLeftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
 .infoSection {
   max-width: 43vw;
   display: flex;

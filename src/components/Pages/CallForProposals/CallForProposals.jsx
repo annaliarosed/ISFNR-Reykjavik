@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./CallForProposals.module.scss";
 import StampTransparent from "../../icons/StampTransparent";
+import { Link } from "react-router-dom";
+import { InfoOutline } from "@mui/icons-material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const AnchorScrollButton = ({ targetId, children, className }) => {
   const handleClick = () => {
@@ -83,17 +86,28 @@ const CallForProposals = () => {
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
               <p>
-                <span style={{ fontWeight: "bold" }}>
-                  All proposals must be made via the online form on the
-                  Programme tab, not by email. There is a 'Propose paper' button
-                  in the title section of each open panel.
-                </span>{" "}
-                Navigate to the panel you are interested in and click on this
-                button to propose directly to that panel. There is also the
-                possibility to submit a paper into the Sui Generis/Individual
-                Papers section (if you do not find a suitable panel from the
-                accepted panels list), from which thematic panels will be
-                formed.
+                <div className={styles.programmeCallOut}>
+                  <InfoOutline
+                    fontSize="small"
+                    style={{
+                      marginTop: "2px",
+                    }}
+                  />
+                  <p>
+                    All proposals must be made via the online form on the{" "}
+                    <Link reloadDocument to="/programme">
+                      Programme tab
+                    </Link>
+                    , not by email. There is a 'Propose paper' button in the
+                    title section of each open panel.
+                  </p>
+                </div>{" "}
+                Navigate to the panel you are interested in and click on the
+                'Propose' button to propose directly to that panel. There is
+                also the possibility to submit a paper into the Sui
+                Generis/Individual Papers section (if you do not find a suitable
+                panel from the accepted panels list), from which thematic panels
+                will be formed.
               </p>
 
               <p>
@@ -122,42 +136,70 @@ const CallForProposals = () => {
 
             <div className={styles.separator} />
 
-            <div className={styles.paperProposalRules}>
-              <p className={styles.rulesHeader}>Proposals must consist of:</p>
-              <ul className={styles.paperProposalList}>
-                <li>
-                  <div className={styles.stamp}>
-                    <StampTransparent />
-                  </div>{" "}
-                  <p>a paper title </p>
-                </li>
-                <li>
-                  <div className={styles.stamp}>
-                    <StampTransparent />
-                  </div>{" "}
-                  <p>names and email addresses of any authors/co-authors</p>
-                </li>
-                <li>
-                  <div className={styles.stamp}>
-                    <StampTransparent />
-                  </div>{" "}
-                  <p>
-                    a short abstract of fewer than 300{" "}
-                    <span style={{ textDecoration: "underline" }}>
-                      characters
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <div className={styles.stamp}>
-                    <StampTransparent />
-                  </div>{" "}
-                  <p>
-                    long abstract of fewer than 250{" "}
-                    <span style={{ textDecoration: "underline" }}>words</span>
-                  </p>
-                </li>
-              </ul>
+            <div className={styles.paperProposalLeftSection}>
+              <div className={styles.paperProposalRules}>
+                <p className={styles.rulesHeader}>Proposals must consist of:</p>
+                <ul className={styles.paperProposalList}>
+                  <li>
+                    <div className={styles.stamp}>
+                      <StampTransparent />
+                    </div>{" "}
+                    <p>a paper title </p>
+                  </li>
+                  <li>
+                    <div className={styles.stamp}>
+                      <StampTransparent />
+                    </div>{" "}
+                    <p>names and email addresses of any authors/co-authors</p>
+                  </li>
+                  <li>
+                    <div className={styles.stamp}>
+                      <StampTransparent />
+                    </div>{" "}
+                    <p>
+                      a short abstract of fewer than 300{" "}
+                      <span style={{ textDecoration: "underline" }}>
+                        characters
+                      </span>
+                    </p>
+                  </li>
+                  <li>
+                    <div className={styles.stamp}>
+                      <StampTransparent />
+                    </div>{" "}
+                    <p>
+                      long abstract of fewer than 250{" "}
+                      <span style={{ textDecoration: "underline" }}>words</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div className={styles.paperProposalRules}>
+                <p className={styles.rulesHeader}>
+                  To propose a paper visit the{"  "}
+                  <Link
+                    reloadDocument
+                    to="/programme"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      marginLeft: "4px",
+                      color: "var(--inky-blue)",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    programme page
+                    <OpenInNewIcon
+                      style={{
+                        marginLeft: "4px",
+                      }}
+                      fontSize="small"
+                    />
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </section>
