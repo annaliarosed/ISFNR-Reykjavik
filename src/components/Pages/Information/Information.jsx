@@ -352,7 +352,7 @@ const Information = () => {
                 <h3>Logging in to look up the fate of your paper</h3>
                 <p>
                   We have asked convenors to email authors about their decisions
-                  after the call for papers deadline (15 October 2025), but
+                  after the call for papers deadline (17 October 2025), but
                   sometimes emails fail, so you can check your paper acceptance
                   status by logging into the system from the conference website
                   (see the Log in link in the right corner of the conference
@@ -642,7 +642,7 @@ const Information = () => {
               </div>
               <div className={cn(styles.infoSection, styles.wide)}>
                 <p>
-                  Please mark up all proposals by 15 October, do not leave any
+                  Please mark up all proposals by 17 October, do not leave any
                   as 'pending'. After moving all papers, click on the 'Save'
                   button beneath the list. All accepted papers will immediately
                   show on your public panel page on the conference website,
@@ -703,7 +703,7 @@ const Information = () => {
               <div className={styles.infoSection}>
                 <h3>Final words</h3>
                 <p>
-                  Please try to meet the requested deadline (15/10/2025), as
+                  Please try to meet the requested deadline (17/10/2025), as
                   this affects all the proposers and all the panels - we will
                   not be able to start the transfer process, before all papers
                   have been marked up
