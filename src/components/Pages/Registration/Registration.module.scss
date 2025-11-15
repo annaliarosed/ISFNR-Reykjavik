@@ -236,6 +236,25 @@ a {
   }
 }
 
+.feeTable {
+  width: 45vw;
+  border-collapse: collapse;
+  margin-top: 8px;
+
+  th,
+  td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--inky-blue);
+  }
+
+  thead th {
+    font-family: "Almendra", serif !important;
+    font-weight: 600;
+    border-bottom: 2px solid var(--inky-blue);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .separator {
     width: 100%;
@@ -274,6 +293,14 @@ a {
     .paperProposalRules {
       width: 100%;
       align-items: flex-start;
+
+      &.queries {
+        svg {
+          margin-top: 0px;
+          width: 250px;
+          height: 250px;
+        }
+      }
     }
 
     .rulesHeader {
@@ -306,24 +333,12 @@ a {
       font-size: 24px !important;
     }
   }
-}
 
-/* NEW: fee table (used by Registration.jsx) */
-.feeTable {
-  width: 45vw;
-  border-collapse: collapse;
-  margin-top: 8px;
-
-  th,
-  td {
-    padding: 8px 10px;
-    text-align: left;
-    border-bottom: 1px solid var(--inky-blue);
+  .feeTable {
+    width: 80vw;
   }
 
-  thead th {
-    font-family: "Almendra", serif !important;
-    font-weight: 600;
-    border-bottom: 2px solid var(--inky-blue);
+  .paperProposalFees {
+    width: 80vw;
   }
 }
