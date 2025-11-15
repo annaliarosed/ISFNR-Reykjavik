@@ -76,7 +76,7 @@ const Information = () => {
                 Authors
               </AnchorScrollButton>
             </li>
-            <li className={styles.navButton}>
+            {/* <li className={styles.navButton}>
               <AnchorScrollButton
                 targetId="marking-up"
                 className={styles.navLink}
@@ -86,7 +86,7 @@ const Information = () => {
                 </div>
                 Marking up papers
               </AnchorScrollButton>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
@@ -261,7 +261,7 @@ const Information = () => {
                 </p>
               </div>
 
-              <div className={styles.infoSection}>
+              {/* <div className={styles.infoSection}>
                 <h3>How to mark your papers</h3>
                 <p>
                   Please scroll down to the
@@ -273,7 +273,7 @@ const Information = () => {
                   </AnchorScrollButton>
                   section for detailed guidelines.
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <div className={styles.separator} />
@@ -285,13 +285,13 @@ const Information = () => {
                 gap: "30px",
               }}
             >
-              <div className={styles.infoSection}>
+              {/* <div className={styles.infoSection}>
                 <h3>Number of sessions</h3>
                 <p>
                   The maximum number of sessions will be decided when the call
                   for papers ends.
                 </p>
-              </div>
+              </div> */}
 
               <div className={styles.infoSection}>
                 <h3>Adding co-convenors, chairs and discussants</h3>
@@ -398,9 +398,7 @@ const Information = () => {
 
               <div className={styles.infoSection}>
                 <h3>Timing of presentations</h3>
-                <p>
-                  This will be finalized after the end of the call for papers.
-                </p>
+                <p>Each panel lasts 105 minutes.</p>
               </div>
             </div>
 
@@ -469,7 +467,7 @@ const Information = () => {
 
         {/* MARKING UP YOUR PAPERS SECTION */}
 
-        <section id="marking-up" className={cn(styles.section)}>
+        {/* <section id="marking-up" className={cn(styles.section)}>
           <h2
             style={{
               marginBottom: "24px",
@@ -711,7 +709,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
