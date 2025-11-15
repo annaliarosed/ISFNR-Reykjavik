@@ -143,4 +143,9 @@
   .firstSection {
     grid-template-columns: 1fr;
   }
+
+  .text,
+  .header {
+    padding: 0 10px;
+  }
 }

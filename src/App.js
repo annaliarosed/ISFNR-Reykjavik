@@ -13,6 +13,7 @@ import Information from "./components/Pages/Information/Information.jsx";
 import CallForProposals from "./components/Pages/CallForProposals/CallForProposals.jsx";
 import Travel from "./components/Pages/Travel/Travel.jsx";
 import Organisers from "./components/Pages/Organisers/Organisers.jsx";
+import Registration from "./components/Pages/Registration/Registration.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path={`/programme`} element={<Programme />} />
             <Route path={`/theme`} element={<Theme />} />
             <Route path={`/cfp`} element={<CallForProposals />} />
+            <Route path={`/registration`} element={<Registration />} />
             <Route path={`/information`} element={<Information />} />
             <Route path={`/travel`} element={<Travel />} />
             <Route path={`/organisers`} element={<Organisers />} />

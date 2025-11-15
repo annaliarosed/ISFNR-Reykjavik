@@ -79,13 +79,22 @@ const NavBar = () => {
             >
               Information
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to={`/cfp`}
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Call for Proposals
+            </NavLink> */}
+
+            <NavLink
+              to={`/registration`}
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            >
+              Registration
             </NavLink>
+
             <NavLink
               to={`/organisers`}
               onClick={() => setIsMenuOpen(false)}
