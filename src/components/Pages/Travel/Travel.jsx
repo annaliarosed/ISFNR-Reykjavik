@@ -310,7 +310,6 @@ const Travel = () => {
               <h3>Tourist information centre</h3>
               <p>Laugavegur 5, 101 Reykjavík</p>
             </div>
-            <div className={styles.separator} />
             <div>
               {/* <h3>Nearby ATMs</h3>
               <ul>
