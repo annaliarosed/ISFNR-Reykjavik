@@ -14,6 +14,7 @@ import CallForProposals from "./components/Pages/CallForProposals/CallForProposa
 import Travel from "./components/Pages/Travel/Travel.jsx";
 import Organisers from "./components/Pages/Organisers/Organisers.jsx";
 import Registration from "./components/Pages/Registration/Registration.jsx";
+import Accommodation from "./components/Pages/Accommodation/Accommodation.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path={`/registration`} element={<Registration />} />
             <Route path={`/information`} element={<Information />} />
             <Route path={`/travel`} element={<Travel />} />
+            <Route path={`/accommodation`} element={<Accommodation />} />
             <Route path={`/organisers`} element={<Organisers />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
