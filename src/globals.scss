@@ -92,3 +92,74 @@ html {
     color: white !important;
   }
 }
+
+// for pay form
+
+/* general form styling */
+
+form fieldset {
+  padding: 10px;
+  border-radius: 8px;
+  border-color: var(--background-color) !important;
+  border-width: 1px;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: baseline !important;
+
+  position: relative !important;
+}
+
+form fieldset #form-delegate-stripe-EURpersonName {
+  margin-top: 6px;
+}
+
+form fieldset label {
+  display: inline-block !important;
+  min-width: 200px !important;
+  padding-right: 5px !important;
+  text-align: left !important;
+  margin-bottom: 8px !important;
+}
+form.remotePaymentForm img {
+  vertical-align: bottom;
+}
+
+form fieldset input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+form fieldset button {
+  background-color: var(--background-color) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  font-size: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+/* the element created after input by validation functionality */
+.personName {
+  display: inline-block;
+  padding: 0 4px;
+  font-style: italic;
+
+  /*font-weight: bold;*/
+  background: #ffffe0;
+  border: 1px solid #f3f1b3;
+}
+.personName:empty {
+  border: none;
+}
+
+/* rai payment forms are in iframes so need some basic styling */
+form.remotePaymentForm.rai {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+form.remotePaymentForm.rai fieldset {
+  border: none;
+}

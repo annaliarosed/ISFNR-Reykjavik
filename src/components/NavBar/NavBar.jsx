@@ -7,6 +7,12 @@ import LogoLeftAligned from "../icons/LogoLeftAligned";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false); // dropdown for "Information"
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    setIsInfoOpen(false);
+  };
 
   return (
     <nav className={styles.wrapper}>
@@ -20,21 +26,28 @@ const NavBar = () => {
           target="_blank"
           rel="noopener noreferrer"
           title="Login"
-          onClick={() => setIsMenuOpen(false)}
+          onClick={handleNavClick}
         >
           <i className="fas fa-user"></i> <span>Login</span>
         </a>
       </div>
+
       {/* Hamburger icon - shown on mobile */}
       <button
         className={styles.hamburger}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => {
+          setIsMenuOpen((prev) => !prev);
+          // close dropdown when main menu is toggled
+          setIsInfoOpen(false);
+        }}
         aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen}
       >
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
       </button>
+
       <div className={styles.content}>
         <div className={styles.logo}>
           <NavLink to="/">
@@ -51,45 +64,78 @@ const NavBar = () => {
           <div className={styles.links}>
             <NavLink
               to="/"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavClick}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Home
             </NavLink>
+
             <NavLink
               to="/theme"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavClick}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Theme
             </NavLink>
+
             <NavLink
               reloadDocument
               to="/programme"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavClick}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Programme
             </NavLink>
 
-            <NavLink
-              to="/information"
-              onClick={() => setIsMenuOpen(false)}
-              className={({ isActive }) => (isActive ? styles.activeLink : "")}
-            >
-              Information
-            </NavLink>
-            {/* <NavLink
-              to={`/cfp`}
-              onClick={() => setIsMenuOpen(false)}
-              className={({ isActive }) => (isActive ? styles.activeLink : "")}
-            >
-              Call for Proposals
-            </NavLink> */}
+            {/* === DROPDOWN: INFORMATION === */}
+            <div className={styles.dropdown}>
+              <button
+                type="button"
+                className={styles.dropdownToggle}
+                onClick={() => setIsInfoOpen((prev) => !prev)}
+                aria-haspopup="true"
+                aria-expanded={isInfoOpen}
+              >
+                Information
+                <span className={styles.dropdownArrow} aria-hidden="true">
+                  ▾
+                </span>
+              </button>
+
+              <div
+                className={cn(styles.dropdownMenu, {
+                  [styles.dropdownOpen]: isInfoOpen,
+                })}
+              >
+                {/* You can adjust these paths / labels to match your routes */}
+                <NavLink
+                  to="/information"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Useful Information
+                </NavLink>
+                <NavLink
+                  to="/travel"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Travel
+                </NavLink>
+                <NavLink
+                  to="/accommodation"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Accommodation
+                </NavLink>
+              </div>
+            </div>
+            {/* === END DROPDOWN === */}
 
             <NavLink
               to={`/registration`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavClick}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Registration
@@ -97,7 +143,7 @@ const NavBar = () => {
 
             <NavLink
               to={`/organisers`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavClick}
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
             >
               Organisers
