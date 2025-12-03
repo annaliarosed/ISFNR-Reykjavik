@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Pay.module.scss"; // reuse wrapper/header styles
+import styles from "./Pay.module.scss";
 
 const Pay = () => {
   useEffect(() => {
@@ -16,13 +16,22 @@ const Pay = () => {
       document.head.appendChild(link);
     }
 
+    // Define global var urlProxy exactly as in their example
+    if (!("urlProxy" in window)) {
+      const proxyScript = document.createElement("script");
+      proxyScript.type = "text/javascript";
+      proxyScript.text = "var urlProxy = '/proxy/proxy.php';";
+      document.body.appendChild(proxyScript);
+    }
+
     const initPayForm = () => {
-      // This is what `var urlProxy = '/proxy/proxy.php';` does in plain JS
-      window.urlProxy = "/proxy/proxy.php";
+      // avoid running twice (e.g. navigating to /pay multiple times)
+      if (window.__nomadPayInitialised) return;
+      window.__nomadPayInitialised = true;
 
       if (typeof window.setupPaymentFormValidation === "function") {
         window.setupPaymentFormValidation(
-          "form-delegate-stripe",
+          "form-delegate-stripe-EUR",
           "userReference",
           "conferenceId"
         );
@@ -30,7 +39,7 @@ const Pay = () => {
 
       if (typeof window.changeFormActionIfBrowserSupportsCORS === "function") {
         window.changeFormActionIfBrowserSupportsCORS(
-          "form-delegate-stripe",
+          "form-delegate-stripe-EUR",
           "proxyForwardToUrl"
         );
       }
@@ -43,26 +52,24 @@ const Pay = () => {
       script = document.createElement("script");
       script.src = JS_URL;
       script.async = true;
-      script.onload = initPayForm;
+      script.onload = () => {
+        script.setAttribute("data-loaded", "true");
+        initPayForm();
+      };
       document.body.appendChild(script);
     } else {
-      // If it's already there but maybe not loaded yet
       if (script.getAttribute("data-loaded") === "true") {
         initPayForm();
       } else {
-        script.addEventListener("load", initPayForm, { once: true });
+        script.addEventListener(
+          "load",
+          () => {
+            script.setAttribute("data-loaded", "true");
+            initPayForm();
+          },
+          { once: true }
+        );
       }
-    }
-
-    // Mark as loaded when load fires
-    if (script) {
-      script.addEventListener(
-        "load",
-        () => {
-          script?.setAttribute("data-loaded", "true");
-        },
-        { once: true }
-      );
     }
   }, []);
 
@@ -78,7 +85,7 @@ const Pay = () => {
           </p>
 
           <form
-            id="form-delegate-stripe"
+            id="form-delegate-stripe-EUR"
             className="remotePaymentForm"
             action="/proxy/proxy.php"
             method="post"
@@ -94,16 +101,14 @@ const Pay = () => {
             <input
               type="hidden"
               name="proxyErrorRedirectUrl"
-              value="https://isfnr.org/pay"
-              // adjust to your real pay page URL
+              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay"
             />
 
             {/* handler redirects here on any error */}
             <input
               type="hidden"
               name="urlError"
-              value="https://isfnr.org/pay"
-              // adjust to your real pay page URL
+              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay_thx"
             />
 
             <input type="hidden" name="stripeIsLive" value="1" />
@@ -111,13 +116,11 @@ const Pay = () => {
               type="hidden"
               name="stripeUrlSuccess"
               value="https://isfnr.org/pay_thx"
-              // success page
             />
             <input
               type="hidden"
               name="stripeUrlCancel"
-              value="https://isfnr.org/pay_fail"
-              // cancel/fail page
+              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay_fail"
             />
             <input
               type="hidden"
@@ -127,14 +130,13 @@ const Pay = () => {
             <input type="hidden" name="stripeCurrency" value="EUR" />
 
             {/* for payment allocation and ajax validation */}
-            <input type="hidden" name="conferenceId" value="133" />
+            <input type="hidden" name="conferenceId" value="135" />
 
             <fieldset>
               <label>Invoice/Delegate No: </label>
               <input
                 type="text"
                 name="userReference"
-                defaultValue=""
                 required
                 pattern="^ *?[Dd]{1}[0-9]{1,6} *$"
                 placeholder="eg D1234"
@@ -146,9 +148,8 @@ const Pay = () => {
               <input
                 type="text"
                 name="amount"
-                defaultValue=""
                 required
-                pattern="^ *?[0-9]{1,3}(\.[0-9]{2})? *$"
+                pattern="^ *?[0-9]{1,3}(\\.[0-9]{2})? *$"
                 placeholder="EUR"
                 title="Enter the amount from your invoice in EUR"
               />

@@ -7,7 +7,7 @@ const PayThanks = () => {
       <h1>Payment Successful!</h1>
       <h2>Thank you for paying your registration online.</h2>
       <p>
-        You will receive an emailed PDF receipt from the WCEH conference
+        You will receive an emailed PDF receipt from the ISFNR conference
         administration shortly. (Please check your spam folder if this does not
         arrive within five minutes.)
       </p>

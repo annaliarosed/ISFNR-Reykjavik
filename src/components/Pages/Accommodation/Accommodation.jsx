@@ -64,7 +64,7 @@ const Accommodation = () => {
               </AnchorScrollButton>
             </li>
 
-            <li className={styles.navButton}>
+            {/* <li className={styles.navButton}>
               <AnchorScrollButton
                 targetId="black-pearl"
                 className={styles.navLink}
@@ -74,7 +74,7 @@ const Accommodation = () => {
                 </div>
                 Black Pearl Hotel
               </AnchorScrollButton>
-            </li>
+            </li> */}
 
             {/* <li className={styles.navButton}>
               <AnchorScrollButton
@@ -100,7 +100,7 @@ const Accommodation = () => {
               </AnchorScrollButton>
             </li> */}
 
-            {/* <li className={styles.navButton}>
+            <li className={styles.navButton}>
               <AnchorScrollButton
                 targetId="kex-hostel"
                 className={styles.navLink}
@@ -110,7 +110,7 @@ const Accommodation = () => {
                 </div>
                 KEX Hostel
               </AnchorScrollButton>
-            </li> */}
+            </li>
           </ul>
         </nav>
       </div>
@@ -275,7 +275,7 @@ const Accommodation = () => {
           </div>
         </section>
         {/* BLACK PEARL */}
-        <section id="black-pearl" className={styles.section}>
+        {/* <section id="black-pearl" className={styles.section}>
           <h2>Black Pearl Hotel</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
@@ -305,8 +305,8 @@ const Accommodation = () => {
                   <strong>Full payment terms:</strong> pay on booking.
                 </li>
                 <li>
-                  <strong>Discount code:</strong> please use the ISFNR2026 promo
-                  code for conference discounts.
+                  <strong>Discount code:</strong> please use the{" "}
+                  <mark>ISFNR2026</mark> promo code for conference discounts.
                 </li>
                 <li>
                   <strong>Location notes:</strong> central Reykjavík,
@@ -315,7 +315,7 @@ const Accommodation = () => {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* 101 HOTEL */}
         {/* <section id="hotel-101" className={styles.section}>
           <h2>101 Hotel (4*)</h2>
@@ -410,7 +410,7 @@ const Accommodation = () => {
             </div>
           </div>
         </section> */}
-        {/* KEX HOSTEL
+        {/* KEX HOSTEL */}
         <section id="kex-hostel" className={styles.section}>
           <h2>KEX Hostel</h2>
           <div className={styles.papersWrapper}>
@@ -441,7 +441,7 @@ const Accommodation = () => {
               </p>
             </div>
           </div>
-        </section> */}
+        </section>
       </div>
     </div>
   );
