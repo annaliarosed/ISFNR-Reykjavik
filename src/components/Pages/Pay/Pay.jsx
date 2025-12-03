@@ -76,9 +76,18 @@ const Pay = () => {
   return (
     <div className={styles.wrapper}>
       <div id="react-minisite-wrapper">
-        <h1 className={styles.header}>Pay</h1>
+        <h1 className={styles.header}>
+          ISFNR2026 conference payment information
+        </h1>
+        <div className={styles.section}>
+          <h2>Payment of conference fees in EUROS ONLY</h2>
+          Do not continue with this page, unless you are completing your
+          completed registration and/or have been sent an invoice.
+          <p></p>
+        </div>
 
         <div className={styles.formWrapper}>
+          <h2>By credit card</h2>
           <p style={{ marginBottom: "1.5rem" }}>
             Please use the form below to pay your conference invoice by card.
             You will need your invoice/delegate number and the amount in EUR.
@@ -164,6 +173,69 @@ const Pay = () => {
               />
             </fieldset>
           </form>
+        </div>
+
+        <div className={styles.section}>
+          <h2>By direct transfer</h2>
+
+          <p>
+            We would prefer that you paid by card, however if you need to, you
+            can make a payment by bank transfer using the following details:
+          </p>
+
+          <ul>
+            <li>Account name: NomadIT Events Ltd</li>
+            <li>
+              Bank name and address: MetroBank, One Southampton Row, London,
+              WC1B 5HA, UK
+            </li>
+            <li>Account Noº: 44989859</li>
+            <li>Sort code: 230580</li>
+            <li>IBAN: GB45MYMB23058044989859</li>
+            <li>BIC: MYMBGB2L</li>
+            <li>Currency: euros</li>
+            <li>Company Registered in UK, Number: 10457675.</li>
+            <li>Registered for VAT in UK, No: 253 9749 64.</li>
+            <li>
+              NomadIT Registered Office: 8 Victoria Ave, Manchester, M19 2PB,
+              UK.
+            </li>
+          </ul>
+
+          <p>
+            If you are able to give a reference, please give your
+            invoice/delegate number. If you account name is different than the
+            name we hold for you, please email{" "}
+            <a href="mailto:isfnr2026@nomadit.co.uk">
+              isfnr2026(at)nomadit.co.uk
+            </a>
+            , with subject "ISFNR2026 conference payment by bank transfer" so as
+            to help identify your payment. In all cases, where possible please
+            email a scan/digital capture of the transfer, to help us identify
+            the payment.
+          </p>
+
+          <p>
+            This is NOT a free service - please ensure that your bank charges
+            your account and does not reduce the amount we receive.
+          </p>
+        </div>
+
+        <div className={styles.section}>
+          <h2>Refund policy</h2>
+
+          <p>
+            If you cancel your registration by notifying us by email more than
+            three weeks in advance we will be able to refund your registration
+            fee, minus €70 to cover our administrative and finance costs.
+            Cancellations made after April 27, 2026 will not be eligible for
+            such a refund, due to the costs already incurred. Refunds at that
+            point will be discretionary. If you are unhappy with the
+            'product/service' you have paid for, please email
+            <a href="mailto:isfnr2026@nomadit.co.uk">
+              isfnr2026(at)nomadit.co.uk
+            </a>
+          </p>
         </div>
       </div>
     </div>
