@@ -119,7 +119,7 @@ const Pay = () => {
             <input
               type="hidden"
               name="urlError"
-              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay_thx"
+              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay"
             />
 
             <input type="hidden" name="stripeIsLive" value="1" />
