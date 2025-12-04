@@ -81,9 +81,11 @@ const Pay = () => {
         </h1>
         <div className={styles.section}>
           <h2>Payment of conference fees in EUROS ONLY</h2>
-          Do not continue with this page, unless you are completing your
-          completed registration and/or have been sent an invoice.
-          <p></p>
+          <p>
+            Do not continue with this page, unless you have been sent an
+            invoice.
+          </p>
+          <p>To pay with Stripe does not require creating an account.</p>
         </div>
 
         <div className={styles.formWrapper}>
@@ -158,7 +160,7 @@ const Pay = () => {
                 type="text"
                 name="amount"
                 required
-                pattern="^ *?[0-9]{1,3}(\\.[0-9]{2})? *$"
+                pattern="^ *[0-9]{1,6}([.,][0-9]{1,2})? *$"
                 placeholder="EUR"
                 title="Enter the amount from your invoice in EUR"
               />
@@ -226,7 +228,7 @@ const Pay = () => {
 
           <p>
             If you cancel your registration by notifying us by email more than
-            three weeks in advance we will be able to refund your registration
+            six weeks in advance we will be able to refund your registration
             fee, minus €70 to cover our administrative and finance costs.
             Cancellations made after April 27, 2026 will not be eligible for
             such a refund, due to the costs already incurred. Refunds at that
