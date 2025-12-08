@@ -89,7 +89,7 @@ const NavBar = () => {
 
             {/* === DROPDOWN: INFORMATION === */}
             <div className={styles.dropdown}>
-              <button
+              <a
                 type="button"
                 className={styles.dropdownToggle}
                 onClick={() => setIsInfoOpen((prev) => !prev)}
@@ -100,7 +100,7 @@ const NavBar = () => {
                 <span className={styles.dropdownArrow} aria-hidden="true">
                   ▾
                 </span>
-              </button>
+              </a>
 
               <div
                 className={cn(styles.dropdownMenu, {

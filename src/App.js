@@ -18,6 +18,7 @@ import Accommodation from "./components/Pages/Accommodation/Accommodation.jsx";
 import Pay from "./components/Pages/Pay/Pay.jsx";
 import PayThanks from "./components/Pages/PayThanks/PayThanks.jsx";
 import PayFail from "./components/Pages/PayFail/PayFail.jsx";
+import Visa from "./components/Pages/Visa/Visa.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <Route path={`/pay`} element={<Pay />} />
             <Route path={`/pay_thx`} element={<PayThanks />} />
             <Route path={`/pay_fail`} element={<PayFail />} />
+            <Route path={`/visa`} element={<Visa />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
           <Footer />
