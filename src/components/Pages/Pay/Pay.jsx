@@ -85,6 +85,13 @@ const Pay = () => {
             Do not continue with this page, unless you have been sent an
             invoice.
           </p>
+          <p>
+            If you chose a membership fee, please remember to send your
+            membership receipt or application receipt to{" "}
+            <a href="mailto:isfnr2026@nomadit.co.uk">
+              isfnr2026(at)nomadit.co.uk
+            </a>
+          </p>
           <p>To pay with Stripe does not require creating an account.</p>
         </div>
 
@@ -126,7 +133,7 @@ const Pay = () => {
             <input
               type="hidden"
               name="stripeUrlSuccess"
-              value="https://isfnr.org/pay_thx"
+              value="https://isfnr.org/we-meet-across-the-world/reykjavik-iceland/pay_thx"
             />
             <input
               type="hidden"
@@ -187,15 +194,14 @@ const Pay = () => {
 
           <ul>
             <li>Account name: NomadIT Events Ltd</li>
+            <li>IBAN: BE22967032561347</li>
+            <li>Swift/BIC: TRWIBEB1XXX</li>
             <li>
-              Bank name and address: MetroBank, One Southampton Row, London,
-              WC1B 5HA, UK
+              Bank name and address: Wise, Rue du Trône 100, 3rd floor,
+              Brussels, 1050, Belgium
             </li>
-            <li>Account Noº: 44989859</li>
-            <li>Sort code: 230580</li>
-            <li>IBAN: GB45MYMB23058044989859</li>
-            <li>BIC: MYMBGB2L</li>
-            <li>Currency: euros</li>
+
+            <li>Currency: Euros</li>
             <li>Company Registered in UK, Number: 10457675.</li>
             <li>Registered for VAT in UK, No: 253 9749 64.</li>
             <li>

@@ -96,6 +96,46 @@ a {
   }
 }
 
+.registerHereButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--background-color);
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex: 0 1 calc(33.333% - 2rem);
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 16px !important;
+  color: var(--text-color);
+  font-family: "Almendra", serif !important;
+  text-transform: capitalize !important;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px;
+
+  &:hover {
+    .stamp {
+      fill: var(--inky-blue);
+    }
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: var(--inky-blue);
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #000;
+    .stamp {
+      fill: var(--inky-blue);
+    }
+    text-decoration: underline;
+    text-decoration-color: var(--inky-blue);
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;

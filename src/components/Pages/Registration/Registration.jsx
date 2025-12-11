@@ -39,21 +39,21 @@ const FeeTable = ({ rows }) => (
 
 const Registration = () => {
   const f2fRows = [
-    { label: "Non-members High", fee: 400 },
-    { label: "Non-members Medium", fee: 360 },
-    { label: "Non-members Low", fee: 330 },
-    { label: "Members High", fee: 370 },
-    { label: "Members Medium", fee: 330 },
-    { label: "Members Low", fee: 300 },
+    { label: "Non-members High", fee: 390 },
+    { label: "Non-members Medium", fee: 350 },
+    { label: "Non-members Low", fee: 320 },
+    { label: "Members High", fee: 360 },
+    { label: "Members Medium", fee: 320 },
+    { label: "Members Low", fee: 290 },
   ];
 
   const onlineRows = [
-    { label: "Non-members High", fee: 270 },
-    { label: "Non-members Medium", fee: 245 },
-    { label: "Non-members Low", fee: 200 },
-    { label: "Members High", fee: 230 },
-    { label: "Members Medium", fee: 200 },
-    { label: "Members Low", fee: 180 },
+    { label: "Non-members High", fee: 260 },
+    { label: "Non-members Medium", fee: 235 },
+    { label: "Non-members Low", fee: 190 },
+    { label: "Members High", fee: 220 },
+    { label: "Members Medium", fee: 190 },
+    { label: "Members Low", fee: 170 },
   ];
 
   return (
@@ -152,6 +152,21 @@ const Registration = () => {
                 invoice by email, which can be paid by card or bank transfer.
                 Invoices should be settled within 15 days.
               </p>
+
+              <p>
+                When choosing a member fee, please remember to send us a receipt
+                of your membership or submitted application after completing
+                conference registration.
+              </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <a className={styles.registerHereButton}>Register Here</a>
+              </div>
             </div>
           </div>
         </section>
@@ -209,7 +224,7 @@ const Registration = () => {
           <h2>Face-to-Face Fees (Early Bird)</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
-              <p>Early Bird registration: December 10, 2025 – March 30, 2026</p>
+              <p>Early Bird registration: December 12, 2025 – March 30, 2026</p>
               <p>
                 Face-to-Face Attendance (entire conference) - This fee includes
                 access to all academic sessions and events, the opening
@@ -230,7 +245,7 @@ const Registration = () => {
           <h2>Online Fees (Early Bird)</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
-              <p>Early Bird registration: December 10, 2025 – March 30, 2026</p>
+              <p>Early Bird registration: December 12, 2025 – March 30, 2026</p>
               <p>
                 Online Attendance (entire conference) - This fee includes access
                 to all academic sessions and events
