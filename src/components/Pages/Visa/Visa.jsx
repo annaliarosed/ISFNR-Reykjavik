@@ -32,6 +32,25 @@ const Visa = () => {
                 Who needs a visa?
               </a>
             </p>
+
+            <p>
+              If you are applying for a visa and need a reference letter from
+              the conference, fill out this form:{" "}
+            </p>
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://nomadit.co.uk/account/forms/conferenceVisaRequest/isfnr2026"
+                className={styles.visaFormButton}
+              >
+                Visa reference letter form
+              </a>
+            </div>
           </>
 
           <div className={styles.separator} />
@@ -194,24 +213,6 @@ const Visa = () => {
             <p>
               Standard processing is up to <b>15 working days</b>. In some cases
               it may take longer, so early application is recommended.
-            </p>
-          </>
-
-          <div className={styles.separator} />
-
-          <>
-            <h3>Need Help?</h3>
-            <p>
-              If you need a <b>visa invitation letter</b> or have questions
-              about the application process, please contact:
-              <a
-                style={{
-                  marginLeft: "4px",
-                }}
-                href="mailto:isfnr2026@nomadit.co.uk"
-              >
-                isfnr2026(at)nomadit.co.uk
-              </a>
             </p>
           </>
         </div>

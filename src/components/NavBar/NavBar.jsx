@@ -116,6 +116,13 @@ const NavBar = () => {
                   Useful Information
                 </NavLink>
                 <NavLink
+                  to="/visa"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Visa
+                </NavLink>
+                <NavLink
                   to="/travel"
                   onClick={handleNavClick}
                   className={styles.dropdownLink}
@@ -128,6 +135,14 @@ const NavBar = () => {
                   className={styles.dropdownLink}
                 >
                   Accommodation
+                </NavLink>
+
+                <NavLink
+                  to="/boycott-statement"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Academic boycott policy
                 </NavLink>
               </div>
             </div>

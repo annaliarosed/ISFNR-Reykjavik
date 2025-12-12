@@ -165,7 +165,12 @@ const Registration = () => {
                   justifyContent: "center",
                 }}
               >
-                <a className={styles.registerHereButton}>Register Here</a>
+                <a
+                  href="https://nomadit.co.uk/account/conference/register/isfnr2026"
+                  className={styles.registerHereButton}
+                >
+                  Register Here
+                </a>
               </div>
             </div>
           </div>
@@ -195,25 +200,22 @@ const Registration = () => {
             <div className={styles.separator} />
             <div className={styles.papersBlurb}>
               <p>
+                Below, you will see <strong>registration fees</strong>{" "}
+                (according to income, from low to high). Registration fees
+                include social events, lunches, and coffee breaks.
+              </p>
+              <p>
                 We will not be requesting documents to verify that delegates
                 choose the correct option according to their income. This system
                 operates on trust. We hope that everybody assesses their
                 institutional funding/income appropriately.
               </p>
 
-              <p>
-                Below are <strong>preliminary registration fees </strong>(final
-                costs are being calculated). These may be reduced by the time
-                registration opens, but they will not increase. Registration
-                fees include social events, lunches, and coffee breaks.
-              </p>
-
               <div className={styles.papersBlurb}>
                 <p>
-                  After the Early Bird registration is over, registration
-                  continues with standard prices. Standard prices will be
-                  confirmed by the end of Early Bird; expect an increase of
-                  about €50. Early Bird ends on <strong>March 30, 2026</strong>.
+                  Early Bird registration December 12, 2025 – March 30, 2026.
+                  Standard prices will be confirmed by the end of Early Bird;
+                  expect an increase of about €50
                 </p>
               </div>
             </div>
