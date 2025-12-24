@@ -101,14 +101,11 @@ const Accommodation = () => {
             </li> */}
 
             <li className={styles.navButton}>
-              <AnchorScrollButton
-                targetId="kex-hostel"
-                className={styles.navLink}
-              >
+              <AnchorScrollButton targetId="hostels" className={styles.navLink}>
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
-                KEX Hostel
+                Hostels
               </AnchorScrollButton>
             </li>
           </ul>
@@ -259,7 +256,7 @@ const Accommodation = () => {
                   <strong>Full payment terms:</strong> payment on booking.*
                 </li>
                 <li>
-                  <strong>Promo code:</strong> <mark>HI2025</mark>
+                  <strong>Promo code:</strong> <mark>HI2026</mark>
                 </li>
                 <li>
                   <strong>Location notes:</strong> dependent on chosen hotel.
@@ -411,10 +408,11 @@ const Accommodation = () => {
           </div>
         </section> */}
         {/* KEX HOSTEL */}
-        <section id="kex-hostel" className={styles.section}>
-          <h2>KEX Hostel</h2>
+        <section id="hostels" className={styles.section}>
+          <h2>Hostels</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
+              <h3>KEX Hostel</h3>
               <p>
                 <strong>Address:</strong> Skúlagata 28, 101 Reykjavík, Iceland
                 <br />
@@ -439,6 +437,192 @@ const Accommodation = () => {
                 for delegates seeking budget-friendly, sociable accommodation in
                 the city centre.
               </p>
+            </div>
+
+            <div className={styles.separator} />
+            <div className={styles.papersBlurb}>
+              <h3>Laekur Hostel</h3>
+
+              <p>
+                <strong>Address:</strong> Laugarnesvegur 74a, Reykjavík, Capital
+                Region 105, Iceland
+                <br />
+                <strong>Phone:</strong> +354 771 9995
+                <br />
+                <strong>Email:</strong>{" "}
+                <a href="mailto:guest@laekur.is">guest@laekur.is</a>
+                <br />
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://www.hostelworld.com/hostels/p/282803/laekur-hostel/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://www.hostelworld.com/hostels/p/282803/laekur-hostel/
+                </a>
+              </p>
+
+              <h3>Rates & booking</h3>
+              <ul>
+                <li>
+                  <strong>Nightly bed and breakfast rate:</strong> Quotes at
+                  time of booking.
+                </li>
+                <li>
+                  <strong>How to book:</strong> Hostel email or booking site
+                </li>
+
+                <li>
+                  <strong>Full payment terms:</strong> Pay on arrival
+                </li>
+                <li>
+                  <strong>Location notes:</strong> Located 2.7km from university
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.colSeparator} />
+
+          <div className={styles.papersWrapper}>
+            <div className={styles.papersBlurb}>
+              <h3>Student Hostel</h3>
+
+              <p>
+                <strong>Address:</strong> Hringbraut 29, Reykjavík 101, Iceland
+                <br />
+                <strong>Phone:</strong> +354510 2828
+                <br />
+                <strong>Email:</strong>{" "}
+                <a href="mailto:info@studenthostels.is">
+                  info@studenthostels.is
+                </a>
+                <br />
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://www.studenthostel.is/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://www.studenthostel.is/
+                </a>
+              </p>
+
+              <h3>Rates & booking</h3>
+              <ul>
+                <li>
+                  <strong>Nightly bed and breakfast rate:</strong> Quotes at
+                  time of booking.
+                </li>
+                <li>
+                  <strong>How to book:</strong> No reservation costs
+                </li>
+
+                <li>
+                  <strong>Full payment terms:</strong> Pay on arrival
+                </li>
+                <li>
+                  <strong>Location notes:</strong> Located on university campus
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.separator} />
+            <div className={styles.papersBlurb}>
+              <h3>Loft Hi –Eco Hostel</h3>
+
+              <p>
+                <strong>Address:</strong> Bankastraeti 7, Hufuoborgarsvaedi 101,
+                Reykjavik
+                <br />
+                <strong>Phone:</strong> +354 553 8140
+                <br />
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://hostellofthieco.reykjavikihotel.com/en/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://hostellofthieco.reykjavikihotel.com/en/
+                </a>
+                <br />
+                <br />
+                <strong>
+                  *Loft Hi-Eco holds SWAN, Nordic Sustainability Eco-Label
+                </strong>{" "}
+              </p>
+
+              <h3>Rates & booking</h3>
+              <ul>
+                <li>
+                  <strong>Nightly bed and breakfast rate:</strong> Quotes at
+                  time of booking.
+                </li>
+                <li>
+                  <strong>Booking:</strong> No reservation costs
+                </li>
+
+                <li>
+                  <strong>Full payment terms:</strong> Pay on arrival
+                </li>
+                <li>
+                  <strong>Location notes:</strong> Located 1.3km from university
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.colSeparator} />
+
+          <div className={styles.papersWrapper}>
+            <div className={styles.papersBlurb}>
+              <h3>Bus Hostel</h3>
+
+              <p>
+                <strong>Address:</strong> Skogarhlio10, 105, Reykjavik
+                <br />
+                <strong>Phone:</strong> +354 535 0350
+                <br />
+                <strong>Email:</strong>{" "}
+                <a href="info@bushostelreykjavik.com">
+                  info@bushostelreykjavik.com
+                </a>
+                <br />
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://www.bushostelreykjavik.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://www.bushostelreykjavik.com/
+                </a>
+                <br />
+              </p>
+
+              <h3>Rates & booking</h3>
+              <ul>
+                <li>
+                  <strong>Nightly bed and breakfast rate:</strong> Quotes at
+                  time of booking.
+                </li>
+                <li>
+                  <strong>Booking:</strong>{" "}
+                  <a
+                    href="https://www.bushostelreykjavik.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    https://www.bushostelreykjavik.com/
+                  </a>
+                </li>
+
+                <li>
+                  <strong>Full payment terms:</strong> Pay on arrival
+                </li>
+                <li>
+                  <strong>Location notes:</strong> Located 1.5km from university
+                </li>
+              </ul>
             </div>
           </div>
         </section>

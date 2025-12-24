@@ -101,14 +101,14 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var(--background-color);
+  background-color: var(--background-color) !important;
   padding: 4px 8px;
   border-radius: 6px;
   flex: 0 1 calc(33.333% - 2rem);
   box-sizing: border-box;
   text-decoration: none;
   font-size: 16px !important;
-  color: var(--text-color);
+  color: var(--text-color) !important;
   font-family: "Almendra", serif !important;
   text-transform: capitalize !important;
   border-radius: 20px;
