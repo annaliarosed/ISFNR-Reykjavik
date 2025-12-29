@@ -20,6 +20,7 @@ import PayThanks from "./components/Pages/PayThanks/PayThanks.jsx";
 import PayFail from "./components/Pages/PayFail/PayFail.jsx";
 import Visa from "./components/Pages/Visa/Visa.jsx";
 import BoycottStatement from "./components/Pages/BoycottStatement/BoycottStatement.jsx";
+import ScamAlert from "./components/Pages/ScamAlert/ScamAlert.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
             <Route path={`/pay_fail`} element={<PayFail />} />
             <Route path={`/visa`} element={<Visa />} />
             <Route path={`/boycott-statement`} element={<BoycottStatement />} />
+            <Route path={`/scam-alert`} element={<ScamAlert />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
           <Footer />

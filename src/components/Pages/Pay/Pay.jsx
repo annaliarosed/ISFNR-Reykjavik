@@ -192,6 +192,21 @@ const Pay = () => {
             can make a payment by bank transfer using the following details:
           </p>
 
+          <p>
+            Please ensure/request that the first part of your bank’s
+            entry/reference against this payment is your invoice number (D
+            number) and/or full name – failure to do so may mean that that we
+            will be unable to establish who has made the payment.
+            <br />
+            <br />
+            Please also email{" "}
+            <a href="mailto:isfnr2026@nomadit.co.uk">
+              isfnr2026(at)nomadit.co.uk
+            </a>{" "}
+            on making such a transfer, with proof of that transfer (e-receipt,
+            screen grab, etc).
+          </p>
+
           <ul>
             <li>Account name: NomadIT Events Ltd</li>
             <li>IBAN: BE22967032561347</li>
@@ -209,19 +224,6 @@ const Pay = () => {
               UK.
             </li>
           </ul>
-
-          <p>
-            If you are able to give a reference, please give your
-            invoice/delegate number. If you account name is different than the
-            name we hold for you, please email{" "}
-            <a href="mailto:isfnr2026@nomadit.co.uk">
-              isfnr2026(at)nomadit.co.uk
-            </a>
-            , with subject "ISFNR2026 conference payment by bank transfer" so as
-            to help identify your payment. In all cases, where possible please
-            email a scan/digital capture of the transfer, to help us identify
-            the payment.
-          </p>
 
           <p>
             This is NOT a free service - please ensure that your bank charges

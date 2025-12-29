@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.scss";
 import cn from "classnames";
 import LogoLeftAligned from "../icons/LogoLeftAligned";
+import CampaignIcon from "@mui/icons-material/Campaign";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -143,6 +144,20 @@ const NavBar = () => {
                   className={styles.dropdownLink}
                 >
                   Academic boycott policy
+                </NavLink>
+
+                <NavLink
+                  to="/scam-alert"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                  style={{
+                    display: "flex",
+                    alignContent: "center",
+                    gap: "4px",
+                  }}
+                >
+                  <CampaignIcon fontSize="small" />
+                  Phishing scam alert
                 </NavLink>
               </div>
             </div>
