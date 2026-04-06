@@ -39,21 +39,21 @@ const FeeTable = ({ rows }) => (
 
 const Registration = () => {
   const f2fRows = [
-    { label: "Non-members High", fee: 390 },
-    { label: "Non-members Medium", fee: 350 },
-    { label: "Non-members Low", fee: 320 },
-    { label: "Members High", fee: 360 },
-    { label: "Members Medium", fee: 320 },
-    { label: "Members Low", fee: 290 },
+    { label: "Non-members High", fee: 450 },
+    { label: "Non-members Medium", fee: 400 },
+    { label: "Non-members Low", fee: 370 },
+    { label: "Members High", fee: 410 },
+    { label: "Members Medium", fee: 370 },
+    { label: "Members Low", fee: 340 },
   ];
 
   const onlineRows = [
-    { label: "Non-members High", fee: 260 },
-    { label: "Non-members Medium", fee: 235 },
-    { label: "Non-members Low", fee: 190 },
-    { label: "Members High", fee: 220 },
-    { label: "Members Medium", fee: 190 },
-    { label: "Members Low", fee: 170 },
+    { label: "Non-members High", fee: 310 },
+    { label: "Non-members Medium", fee: 285 },
+    { label: "Non-members Low", fee: 240 },
+    { label: "Members High", fee: 270 },
+    { label: "Members Medium", fee: 240 },
+    { label: "Members Low", fee: 220 },
   ];
 
   return (
@@ -212,21 +212,16 @@ const Registration = () => {
               </p>
 
               <div className={styles.papersBlurb}>
-                <p>
-                  Early Bird registration December 12, 2025 – March 30, 2026.
-                  Standard prices will be confirmed by the end of Early Bird;
-                  expect an increase of about €50
-                </p>
+                <p>Early Bird registration ended March 31, 2026.</p>
               </div>
             </div>
           </div>
         </section>
 
         <section id="f2f" className={styles.section}>
-          <h2>Face-to-Face Fees (Early Bird)</h2>
+          <h2>Face-to-Face Fees</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
-              <p>Early Bird registration: December 12, 2025 – March 30, 2026</p>
               <p>
                 Face-to-Face Attendance (entire conference) - This fee includes
                 access to all academic sessions and events, the opening
@@ -244,10 +239,9 @@ const Registration = () => {
         </section>
 
         <section id="online" className={styles.section}>
-          <h2>Online Fees (Early Bird)</h2>
+          <h2>Online Fees</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
-              <p>Early Bird registration: December 12, 2025 – March 30, 2026</p>
               <p>
                 Online Attendance (entire conference) - This fee includes access
                 to all academic sessions and events

@@ -34,6 +34,11 @@ const Programme = () => {
       wrapper.insertBefore(newsDiv, sweetDiv);
     }
 
+    // Set default hash to #timetable if not present
+    if (!window.location.hash) {
+      window.location.hash = 'timetable';
+    }
+
     // ✅ Setup scripts after ensuring both JS files are loaded
     const initNomadScripts = () => {
       if (typeof window.SetupConferenceExplorer === "function") {
