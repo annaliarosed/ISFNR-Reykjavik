@@ -31,6 +31,11 @@ html {
     font-size: 18px !important;
   }
 
+  #conference-sweet {
+    position: relative;
+    z-index: 20;
+  }
+
   .toggle-loggedin-menu {
     color: var(--background-color) !important;
 
@@ -157,8 +162,9 @@ form fieldset button {
 
 /* rai payment forms are in iframes so need some basic styling */
 form.remotePaymentForm.rai {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 form.remotePaymentForm.rai fieldset {
   border: none;
