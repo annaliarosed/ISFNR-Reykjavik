@@ -117,6 +117,13 @@ const NavBar = () => {
                   Useful Information
                 </NavLink>
                 <NavLink
+                  to="/running-a-hybrid-panel"
+                  onClick={handleNavClick}
+                  className={styles.dropdownLink}
+                >
+                  Running a hybrid panel
+                </NavLink>
+                <NavLink
                   to="/visa"
                   onClick={handleNavClick}
                   className={styles.dropdownLink}

@@ -21,6 +21,7 @@ import PayFail from "./components/Pages/PayFail/PayFail.jsx";
 import Visa from "./components/Pages/Visa/Visa.jsx";
 import BoycottStatement from "./components/Pages/BoycottStatement/BoycottStatement.jsx";
 import ScamAlert from "./components/Pages/ScamAlert/ScamAlert.jsx";
+import RunningAHybridPanel from "./components/Pages/RunningAHybridPanel/RunningAHybridPanel.jsx";
 // import ScrollToTop from "./components/hooks/ScrollToTop.jsx";
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path={`/visa`} element={<Visa />} />
             <Route path={`/boycott-statement`} element={<BoycottStatement />} />
             <Route path={`/scam-alert`} element={<ScamAlert />} />
+            <Route path={`/running-a-hybrid-panel`} element={<RunningAHybridPanel />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
           <Footer />
