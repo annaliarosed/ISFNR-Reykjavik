@@ -147,9 +147,10 @@
   gap: 8px;
   padding-left: 24px;
   margin: 0;
-
+  list-style: disc !important;
   li {
     line-height: 1.6;
+    list-style: disc !important;
   }
 }
 

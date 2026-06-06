@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Travel.module.scss";
 import StampTransparent from "../../icons/StampTransparent";
-import Logo1 from "../../icons/Logo1";
 import Map from "../../images/Map";
+import MainCampusMap from "../../images/MainCampusMap";
 
 const AnchorScrollButton = ({ targetId, children, className }) => {
   const handleClick = () => {
@@ -116,7 +116,7 @@ const Travel = () => {
                 Accessibility & WiFi
               </AnchorScrollButton>
             </li>
-            <li className={styles.navButton}>
+            {/* <li className={styles.navButton}>
               <AnchorScrollButton
                 targetId="catering-amenities"
                 className={styles.navLink}
@@ -126,7 +126,7 @@ const Travel = () => {
                 </div>
                 Catering & amenities
               </AnchorScrollButton>
-            </li>
+            </li> */}
             <li className={styles.navButton}>
               <AnchorScrollButton
                 targetId="emergency-contacts"
@@ -157,8 +157,14 @@ const Travel = () => {
               </p>
               <p>
                 Airport transfer options include Flybus, Airport Direct, taxis,
-                or rental cars. More information is available on the airport
-                website.
+                or rental cars. More information is available on the{" "}
+                <a
+                  href="https://www.kefairport.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  airport website.
+                </a>
               </p>
             </div>
           </div>
@@ -183,19 +189,21 @@ const Travel = () => {
                 The university is centrally located and within walking distance
                 of downtown Reykjavík.
               </p>
+
+              <p>
+                We are using University Centre/Háskólatorg (registration,
+                conference office, poster session, lunch, info points),
+                Árnagarður (rooms starting with letter A), Oddi (rooms starting
+                with letter O), Veröld (rooms starting with letter V), and
+                Háskólabíó (Keynotes, annual meeting) buildings, indicated with
+                green on the map.
+              </p>
             </div>
 
             <div className={styles.separator} />
 
             <div className={styles.queries}>
-              <Logo1 />
-              <p>
-                For conference-related queries, please contact{" "}
-                <a href="mailto:isfnr2026@nomadit.co.uk">
-                  isfnr2026(at)nomadit.co.uk
-                </a>
-                .
-              </p>
+              <MainCampusMap />
             </div>
           </div>
         </section>
@@ -229,9 +237,26 @@ const Travel = () => {
                 and guesthouses. It is also a 15–20 minute walk from the BSI bus
                 station, where buses from the airport stop.
               </p>
-              <p>Directions and maps will be linked closer to the event.</p>
             </div>
           </div>
+          <div className={styles.colSeparator} />
+
+          <h3>Maps</h3>
+          <a
+            href="https://www.google.com/maps/d/u/0/viewer?mid=1hMGhj4T-S8vRcJBhWibyP494P7a1_9s&ll=64.13725799056913%2C-21.942188200000004&z=13"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Map for conference related venues
+          </a>
+          <a
+            style={{ marginTop: "10px" }}
+            href="https://www.google.com/maps/d/u/0/viewer?ll=64.14053620859285%2C-21.95149816889939&z=16&mid=1XXpSlYmjbYUnbF4teYW7TFuasU7uR17L"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Iceland Campus Map
+          </a>
         </section>
 
         {/* PUBLIC TRANSPORT */}
@@ -277,7 +302,17 @@ const Travel = () => {
               <ul>
                 <li>
                   <strong>Hreyfill Bæjarleiðir</strong> – +354 588 5522 –{" "}
-                  <a href="mailto:tour@hreyfill.is">tour@hreyfill.is</a>
+                  <a href="mailto:threyfill@hreyfill.is">
+                    hreyfill@hreyfill.is
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://www.hreyfill.is/en/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.hreyfill.is/en/
+                  </a>
                 </li>
                 <li>
                   <strong>BSR</strong> – +354 561 0000 –{" "}
@@ -333,10 +368,12 @@ const Travel = () => {
                 your way to the venue during registration hours.
               </p>
               <p>
-                The registration desk will be located in the main lobby of the
-                conference venue. Opening hours will be published closer to the
-                event. Volunteers will be on hand to assist with check-in and
-                provide your delegate badge.
+                The <strong>registration desk</strong> will be located in the
+                main lobby of the conference venue. Registration desk is open
+                from 11:00 to 16:00 on June 13. On other days, you can head
+                downstairs to HT103, where the conference office is located.
+                Volunteers will be on hand to assist with check-in and provide
+                your delegate badge.
               </p>
             </div>
           </div>
@@ -348,10 +385,6 @@ const Travel = () => {
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
               <ul>
-                <li>
-                  A venue map and accessibility guide will be made available
-                  prior to the event.
-                </li>
                 <li>Eduroam is available throughout the campus.</li>
                 <li>
                   Guest WiFi credentials will also be available at the
@@ -363,7 +396,7 @@ const Travel = () => {
         </section>
 
         {/* CATERING & AMENITIES */}
-        <section id="catering-amenities" className={styles.section}>
+        {/* <section id="catering-amenities" className={styles.section}>
           <h2>Catering & amenities</h2>
           <div className={styles.papersWrapper}>
             <div className={styles.papersBlurb}>
@@ -379,7 +412,7 @@ const Travel = () => {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* EMERGENCY CONTACTS */}
         <section id="emergency-contacts" className={styles.section}>
@@ -391,9 +424,7 @@ const Travel = () => {
                   <strong>Emergency services (police, ambulance, fire):</strong>{" "}
                   Dial 112
                 </li>
-                <li>
-                  <strong>Conference phone:</strong> [TBA]
-                </li>
+
                 <li>
                   <strong>Conference email:</strong>{" "}
                   <a href="mailto:isfnr2026@nomadit.co.uk">

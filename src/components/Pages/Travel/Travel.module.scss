@@ -219,8 +219,8 @@ a {
     text-align: center;
 
     svg {
-      width: 250px;
-      height: 250px;
+      width: 50vw;
+      height: auto;
     }
   }
 }
@@ -382,6 +382,15 @@ a {
   .buttonsImgWrapper {
     img {
       width: 90%;
+    }
+  }
+
+  .papersWrapper {
+    .queries {
+      svg {
+        width: 75vw;
+        height: auto;
+      }
     }
   }
 }
