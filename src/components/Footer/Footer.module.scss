@@ -7,12 +7,35 @@
   z-index: 10;
 }
 
+.logosWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0;
+
+  .logo {
+    svg {
+      width: 70px;
+      height: auto;
+      filter: brightness(0.9) contrast(1.1);
+    }
+  }
+}
+
 .footerItem {
   display: flex;
   gap: 4px;
   color: var(--text-color-contrast);
   background-color: #17191899;
-  align-self: end;
+  align-self: start;
 
   p {
     margin: 0;

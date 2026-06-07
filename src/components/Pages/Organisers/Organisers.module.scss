@@ -36,13 +36,62 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 24px;
-    margin-bottom: 20px;
+    margin: 24px 0;
 
-    img {
-      height: 80px;
-      width: auto;
+    .logo {
+      height: auto;
       filter: brightness(0.9) contrast(1.1);
+    }
+
+    .ethnologyLogo {
+      svg {
+        height: 100px;
+        width: auto;
+      }
+    }
+
+    .uniLogo {
+      svg {
+        height: 60px;
+        width: auto;
+      }
+    }
+
+    .arniLogo {
+      svg {
+        height: 100px;
+        width: auto;
+      }
+    }
+
+    .nationalMuseum {
+      svg {
+        height: 80px;
+        width: auto;
+      }
+    }
+
+    .artMuseum {
+      svg {
+        height: 80px;
+        width: auto;
+      }
+    }
+
+    .nationalGallery {
+      svg {
+        height: 80px;
+        width: auto;
+      }
+    }
+
+    .cityMuseum {
+      svg {
+        height: 80px;
+        width: auto;
+      }
     }
   }
 
@@ -50,6 +99,13 @@
     max-width: 800px;
     margin: 0 auto 12px;
     line-height: 1.6;
+  }
+}
+
+.isfnrLogo {
+  svg {
+    height: 60px;
+    width: auto;
   }
 }
 
