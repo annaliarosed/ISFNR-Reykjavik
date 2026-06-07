@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Information.module.scss";
 import StampTransparent from "../../icons/StampTransparent";
-import BlueStampTransparent from "../../icons/BlueStampTransparent";
 import cn from "classnames";
 import Logo1 from "../../icons/Logo1";
-import AnnouncementOutlinedIcon from "@mui/icons-material/AnnouncementOutlined";
+import ProgrammeNavigationImage from "../../icons/ProgrammeNavigationImage";
+import PanelRecordingsImage from "../../icons/PanelRecordingsImage";
 
 //images
 // import panelsLogIn from "../../../images/panelsLogIn.png";
@@ -54,7 +54,7 @@ const Information = () => {
                 <div className={styles.stamp}>
                   <StampTransparent />
                 </div>
-                Hybrid
+                Online Attendance
               </AnchorScrollButton>
             </li>
             <li className={styles.navButton}>
@@ -121,78 +121,184 @@ const Information = () => {
           </div>
         </section>
 
-        <section id="hybrid" className={cn(styles.section, styles.col)}>
-          <h2>hybrid online information</h2>
-          <div className={cn(styles.papersWrapper, styles.col)}>
-            <div className={cn(styles.papersBlurb, styles.image)}>
-              <span>
-                <p className={styles.subHeader}>How to find zoom links:</p>
+        <section id="hybrid" className={cn(styles.section)}>
+          <h2 style={{ marginBottom: "24px" }}>
+            Online attendance information
+          </h2>
+          <div className={styles.papersWrapper}>
+            <div className={styles.papersBlurb}>
+              <div className={styles.infoSection}>
+                <h3>Entering/Navigating the Conference</h3>
                 <p>
-                  All registered delegates will gain access to the conference
-                  via the congress programme. Both those registered as
-                  participating face-to-face and online. These links will only
-                  be visible during the conference
+                  To access the conference remotely head to the ISFNR2026
+                  programme and ensure you are logged in. Only logged-in,
+                  paid-up delegates will be able to see the 'Enter Virtual Room'
+                  buttons on the panel pages. You can find the links both in the
+                  timetable, and from searching, or scrolling through the entire
+                  list of panels.
                 </p>
-                <p>
-                  In order to access the Zooms and subsequent recordings you
-                  need to be registered and logged in.
-                </p>
-                <p>
-                  Once logged in the message and log in button in the programme
-                  disappear and the website is showing that you are now 'logged
-                  in'.
-                </p>
-              </span>
+                <div className={styles.svgWrapper}>
+                  <ProgrammeNavigationImage />
+                </div>
 
-              <div className={styles.imgWrapper}>
-                <div
-                  className={styles.img}
-                  style={{
-                    backgroundImage: `url(${"https://isfnr.org/wp-content/uploads/2025/08/panelsLogIn.png"})`,
-                  }}
-                />
+                <p>
+                  For example, to find Panel P10 click the search button
+                  (magnifying glass) on the timetable toolbar, and type in P10.
+                  You can then click on the panel name to expand to read
+                  abstracts.
+                </p>
+                <p>
+                  Use the participants tab to see a list of all delegates, which
+                  you can search (or filter by role); mouseover a name to see a
+                  pop-up showing name, institution, and links to the
+                  panels/papers they are involved in. (Through Logged In, Manage
+                  Account you can add a portrait/avatar and a short biography,
+                  too.)
+                </p>
+                <p>The search button searches the full programme.</p>
+                <p>
+                  When logged in you can 'star' (favourite) panels you wish to
+                  attend, so you can easily find them on the day by clicking on
+                  the &#9733; icon in the programme view. (If you star a paper,
+                  a hollow star will be added to its panel.)
+                </p>
+              </div>
+
+              <div className={styles.infoSection}>
+                <h3>Accessing the Zooms</h3>
+                <p>
+                  The hybrid conference takes place in Reykjavík, Iceland and on
+                  Zoom, so chairs/convenors should be chairing their sessions
+                  both in the face-to-face (f2f) room and in Zoom.
+                </p>
+                <p>
+                  We will <strong>NOT</strong> be sending out any Zoom links, as
+                  all sessions will be accessed via the website. Logged-in,
+                  paid-up delegates can see 'Enter virtual room' buttons in the
+                  panel explorer, specifically in the header of the panel page.
+                  Click that button to enter the zoom for that panel.
+                </p>
+                <p>Make sure you are clear about the timezone.</p>
+                <p>
+                  <strong>N.B.</strong> If you are running Ad-block or other
+                  privacy software and cannot see the blue buttons once logged
+                  in, disable those extensions for the nomadit.co.uk domain.
+                </p>
+              </div>
+
+              <div className={styles.infoSection}>
+                <p className={styles.subHeader}>
+                  Some tips when entering a zoom session:
+                </p>
+                <ol>
+                  <li>
+                    Remember to keep yourself muted if/when you are not
+                    presenting, to avoid any feedback.
+                  </li>
+                  <li>
+                    When presenting, try to use headphones or a good microphone.
+                  </li>
+                  <li>
+                    You can choose whether or not to have your camera on; bear
+                    in mind that the convenor will spotlight you when presenting
+                    your paper.
+                  </li>
+                  <li>
+                    For technical support, you can reach out to the volunteer in
+                    the Zoom chat.
+                  </li>
+                </ol>
               </div>
             </div>
 
-            <div className={styles.colSeparator} />
-            <div className={cn(styles.papersBlurb, styles.image)}>
-              <span>
-                <p className={styles.subHeader}>
-                  {" "}
-                  Only logged in and paid up delegates will see the Zoom access
-                  buttons in the programme.
+            <div className={styles.separator} />
+
+            <div className={styles.papersBlurb}>
+              <div className={styles.infoSection}>
+                <h3>How to ask questions online</h3>
+                <p>
+                  Convenors will communicate at the start of the session how
+                  they'd like to take questions from online participants. This
+                  can happen in two main ways:
+                </p>
+                <ol>
+                  <li>Writing questions into Zoom chat</li>
+                  <li>
+                    Using the 'raise hand' function in Zoom (when invited, you
+                    then ask your question orally)
+                  </li>
+                </ol>
+              </div>
+              <div className={styles.infoSection}>
+                <h3>Remote presentations</h3>
+                <p>
+                  If you worry about your Internet connection, we recommend to
+                  pre-record your presentation and send to convenors in advance
+                  (or to the conference email), as:
+                </p>
+                <ol>
+                  <li>
+                    Connections can be unpredictable or consistently too poor to
+                    deliver a clear, audible presentation.
+                  </li>
+                  <li>
+                    Issues can arise on the day which can delay the panel.
+                  </li>
+                </ol>
+                <p>
+                  Authors can still present live, but they should try to check
+                  their connection speed before the conference and decide
+                  whether live/recorded is best based on this information.
+                </p>
+              </div>
+
+              <div className={styles.infoSection}>
+                <h3>Viewing Panel Recordings</h3>
+                <p>
+                  Recordings of all the panels will appear embedded on the panel
+                  page a couple of hours after the session ends, visible only to
+                  delegates. Find the video beneath the panel's (paper)
+                  abstracts. Click to expand and watch. The videos will remain
+                  in place for at least two weeks.
+                </p>
+                <div className={styles.svgWrapper}>
+                  <PanelRecordingsImage />
+                </div>
+              </div>
+
+              <div className={styles.infoSection}>
+                <h3>Recording panels</h3>
+                <p>
+                  If your panel does not wish to be recorded at all, you can ask
+                  the volunteer to NOT begin recording at the beginning of the
+                  session.
                 </p>
                 <p>
-                  Buttons for online access (titled: "Enter Virtual Room")
-                  appear in the panel header above the abstracts.
-                </p>
-                <p>The same buttons will appear on plenaries, keynotes, etc.</p>
-                <p>
-                  Make sure you have the latest version of the Zoom app
-                  installed on your computer and your camera and microphone
-                  working. You will need to have a Zoom account (albeit this can
-                  be a free account, not a professional one).
+                  Alternatively you can ask the conference administrators to
+                  delete the recording later. Presenters can also ask for the
+                  recording to be paused while they are presenting.
                 </p>
                 <p>
-                  Online contributors must ensure that they have a strong enough
-                  connection to present online. If this is not the case, it is
-                  possible for contributors to send a recording to their
-                  convenors; this can also be done as “in case” the internet
-                  connection has problems on the day, or any other tech issues
-                  they may be having from home. The congress admins on{" "}
+                  (Please remind the volunteer to restart the paused recording
+                  for the next presenter!)
+                </p>
+              </div>
+
+              <div className={styles.infoSection}>
+                <h3>Certificates of Attendance</h3>
+                <p>
+                  After the conference is over we will confirm with panel
+                  convenors as to the attendance status of online participants
+                  and about two weeks later, you can download your certificate.
+                  Once logged in, go to Conferences in the drop-down and the
+                  ISFNR2026 Conference to find the link to your Certificate.
+                </p>
+                <p>
+                  If you have any questions, please get in contact:{" "}
                   <a href="mailto:isfnr2026@nomadit.co.uk">
                     isfnr2026(at)nomadit.co.uk
-                  </a>{" "}
-                  can also help organise a transfer.
+                  </a>
                 </p>
-              </span>
-              <div className={styles.imgWrapper}>
-                <div
-                  className={styles.img}
-                  style={{
-                    backgroundImage: `url(${"https://isfnr.org/wp-content/uploads/2025/08/virtualRoomImage.png"})`,
-                  }}
-                />
               </div>
             </div>
           </div>
@@ -249,7 +355,7 @@ const Information = () => {
                   but can include fewer - this is a convenor decision. For
                   example, a panel with eight accepted can be split over two
                   sessions as 4+4, 6+2 or 2+6, etc. Convenors can indicate the
-                  distribution by “dragging and dropping” papers in the desired
+                  distribution by "dragging and dropping" papers in the desired
                   order,{" "}
                   <a
                     href="https://nomadit.co.uk/account/contact/manageConferences/isfnr2026"
@@ -495,7 +601,7 @@ const Information = () => {
                     conference management page
                   </a>{" "}
                   and clicking the pencil icon on the left of the panel
-                  reference, under “Edit”.
+                  reference, under "Edit".
                 </p>
 
                 <div className={styles.imgWrapper}>
@@ -716,9 +822,3 @@ const Information = () => {
 };
 
 export default Information;
-
-const Email = () => {
-  return (
-    <a href="mailto:isfnr2026@nomadit.co.uk">isfnr2026(at)nomadit.co.uk</a>
-  );
-};

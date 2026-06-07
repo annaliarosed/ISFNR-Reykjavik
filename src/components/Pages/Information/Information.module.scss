@@ -48,6 +48,13 @@ a {
   }
 }
 
+.svgWrapper {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .firstSection {
   display: flex;
   flex-direction: column;
@@ -205,6 +212,7 @@ a {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
+    gap: 30px;
   }
 
   .queries {
@@ -235,6 +243,19 @@ a {
   }
 }
 
+.imagePlaceholder {
+  width: 100%;
+  min-height: 200px;
+  background-color: #e8e8e8;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
+  border-radius: 4px;
+}
+
 .infoSection {
   max-width: 43vw;
   display: flex;
@@ -250,6 +271,9 @@ a {
 
   p {
     margin: 0;
+  }
+  ol {
+    margin-top: 0;
   }
 }
 
