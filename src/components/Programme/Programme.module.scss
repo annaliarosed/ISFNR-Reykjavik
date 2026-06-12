@@ -8,3 +8,23 @@
   font-family: "Almendra", serif !important;
   text-align: center;
 }
+
+.downloadLink {
+  display: block;
+  width: fit-content;
+  margin: 16px auto;
+  padding: 10px 20px;
+  border: 1px solid var(--background-color) !important;
+  border-bottom: 1px solid var(--background-color) !important;
+  border-radius: 4px;
+  color: var(--background-color) !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+}

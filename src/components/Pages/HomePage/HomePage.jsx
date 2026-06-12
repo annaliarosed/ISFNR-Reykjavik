@@ -24,6 +24,14 @@ const HomePage = () => {
         We look forward to seeing you in Reykjavík!`}
             </p>
 
+            <a
+              href="https://isfnr.org/wp-content/uploads/2026/06/ISFNR-2026-Programme.pdf"
+              download
+              className={styles.downloadLink}
+            >
+              Download programme in PDF form
+            </a>
+
             <div>
               <DatesTable />
             </div>
